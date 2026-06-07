@@ -1,0 +1,28 @@
+# Do NOT update manually; changes here will be overwritten by Copier
+_commit: 6d31897
+_src_path: https://github.com/xxp-odoo-erp/xxp-addons-repo-template.git
+additional_ruff_rules: []
+convert_readme_fragments_to_markdown: false
+enable_checklog_odoo: true
+generate_requirements_txt: true
+github_check_license: true
+github_ci_extra_env: {}
+github_enable_codecov: true
+github_enable_makepot: true
+github_enable_stale_action: true
+github_enforce_dev_status_compatibility: true
+github_odoo_ee: false
+include_wkhtmltopdf: false
+odoo_test_flavor: Both
+odoo_version: 16.0
+org_name: XXP
+org_slug: xxp-odoo-erp
+postgres_image: ''
+rebel_module_groups: []
+repo_description: Odoo addons developed and maintained by XXP
+repo_name: XXP Open source Odoo modules
+repo_slug: odoo-addons
+repo_website: https://xxp-odoo.com
+use_pyproject_toml: false
+use_ruff: true
+
