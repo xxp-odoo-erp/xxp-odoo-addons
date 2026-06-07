@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!--
+    Copyright (C) 2025 XXP
+    License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
+    -->
+
+    <record id="res_partner_form_view" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit.cdek.delivery</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <group name="sale" position="after">
+                <field name="delivery_carrier_type" invisible="1" />
+                <field name="cdek_tariff_mode_domain" invisible="1" />
+                <group name="cdek" string="CDEK">
+                    <field name="cdek_delivery_type" string="Delivery Type" />
+                    <label
+                        for="cdek_office_code"
+                        string="Office Code"
+                        class="oe_inline"
+                        attrs="{'invisible': [('cdek_delivery_type', '!=', 'office')]}"
+                    />
+                    <div
+                        class="o_row"
+                        attrs="{'invisible': [('cdek_delivery_type', '!=', 'office')]}"
+                    >
+                        <field name="cdek_office_code" readonly="1" force_save="1" />
+                        <button
+                            name="action_search_cdek_office"
+                            string="Search Office"
+                            type="object"
+                            class="btn btn-success"
+                            icon="fa-map-marker"
+                        />
+                    </div>
+                    <field name="cdek_city_code" string="City Code" />
+                    <field
+                        name="cdek_tariff_mode_id"
+                        string="Tariff"
+                        domain="cdek_tariff_mode_domain"
+                        attrs="{'invisible': [('delivery_carrier_type', '!=', 'cdek')]}"
+                    />
+                    <field name="cdek_contragent_type" string="Contragent Type" />
+                </group>
+            </group>
+        </field>
+    </record>
+
+</odoo>

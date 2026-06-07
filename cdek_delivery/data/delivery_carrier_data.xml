@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+    <!--
+    Copyright (C) 2025 XXP
+    License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
+    -->
+
+    <record id="cdek_delivery_carrier" model="delivery.carrier">
+        <field name="name">CDEK Delivery</field>
+        <field name="product_id" ref="cdek_delivery.product_product_delivery_cdek" />
+        <field name="delivery_type">cdek</field>
+
+    </record>
+
+</odoo>

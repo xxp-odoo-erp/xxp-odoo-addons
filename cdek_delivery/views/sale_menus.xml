@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!--
+    Copyright (C) 2025 XXP
+    License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
+    -->
+
+    <menuitem
+        id="menu_cdek_delivery"
+        name="CDEK"
+        parent="sale.menu_sale_config"
+        sequence="35"
+    >
+        <menuitem
+            id="menu_cdek_delivery_tariffs"
+            name="Tariffs"
+            action="cdek_delivery.action_open_cdek_tariffs"
+            sequence="10"
+        />
+    </menuitem>
+
+</odoo>

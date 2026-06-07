@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!--
+    Copyright (C) 2025 XXP
+    License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
+    -->
+
+    <record id="stock_picking_form_view" model="ir.ui.view">
+        <field name="name">stock.picking.form.view.cdek</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="delivery.view_picking_withcarrier_out_form" />
+        <field name="arch" type="xml">
+           <label for="carrier_tracking_ref" position="before">
+                <field name="cdek_order_uuid" />
+           </label>
+        </field>
+    </record>
+
+</odoo>

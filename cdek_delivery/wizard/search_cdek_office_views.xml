@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!--
+    Copyright (C) 2025 XXP
+    License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
+    -->
+
+    <record id="search_cdek_office_line_view_form" model="ir.ui.view">
+        <field name="name">search.cdek.office.line.view.form</field>
+        <field name="model">search.cdek.office.line</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="search_id" invisible="1" />
+                    <field name="code" />
+                    <field name="type" />
+                    <field name="address" string="Address" />
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="search_cdek_office_view_form" model="ir.ui.view">
+        <field name="name">search.cdek.office.view.form</field>
+        <field name="model">search.cdek.office</field>
+        <field name="arch" type="xml">
+            <form>
+                <group string="Search Options">
+                    <field name="partner_id" invisible="1" />
+                    <field
+                        name="point_type"
+                        widget="radio"
+                        options="{'horizontal': true}"
+                    />
+                    <field name="city" required="1" />
+                    <field name="country_id" required="1" />
+                    <field name="zip" />
+                </group>
+                <separator string="Offices" />
+                <field name="office_ids" widget="one2many" readonly="1">
+                    <tree>
+                        <field name="search_id" invisible="1" />
+                        <field name="code" />
+                        <field name="type" />
+                        <field name="address" />
+                        <button
+                            name="confirm"
+                            string="Select"
+                            type="object"
+                            class="oe_link"
+                            icon="fa-check"
+                        />
+                    </tree>
+                </field>
+                <footer>
+                    <button
+                        name="load"
+                        string="Load"
+                        type="object"
+                        icon="fa-search"
+                        class="btn btn-primary"
+                        attrs="{'invisible': [('office_ids', '!=', [])]}"
+                    />
+                    <button
+                        name="load"
+                        icon="fa-refresh"
+                        string="Reload"
+                        type="object"
+                        class="btn btn-secondary"
+                        attrs="{'invisible': [('office_ids', '=', [])]}"
+                    />
+                    <button special="cancel" class="btn btn-secondary">Close</button>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+</odoo>

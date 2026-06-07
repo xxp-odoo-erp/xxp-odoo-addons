@@ -1,0 +1,777 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+    <!--
+    Copyright (C) 2025 XXP
+    License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
+    -->
+
+    <record id="product_product_delivery_cdek" model="product.product">
+        <field name="name">CDEK Delivery</field>
+        <field name="default_code">cdek</field>
+        <field name="type">service</field>
+        <field name="categ_id" ref="delivery.product_category_deliveries" />
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="list_price">0.0</field>
+        <field name="invoice_policy">order</field>
+    </record>
+
+    <record id="product_product_cdek_insurance" model="product.product">
+        <field name="name">CDEK: Insurance</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">INSURANCE</field>
+        <field name="default_code">INSURANCE</field>
+        <field name="description" type="html">
+            <p>Providing insurance protection for the parcel.
+For "E-commerce" order types, the insurance surcharge is calculated from the declared value of the shipment and the service is charged automatically; not allowed for independent entry in services.code.
+For "Delivery" order types, if the service is not provided by the user in services.code, it is added automatically with parameter services.parameter = 1. This value will be processed by the system so that the insurance will be free. However, we recommend passing the actual declared value of the shipment.</p>
+        </field>
+    </record>
+
+    <record id="product_product_cdek_take_sender" model="product.product">
+        <field name="name">CDEK: Pickup in Sender's City</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">TAKE_SENDER</field>
+        <field name="default_code">TAKE_SENDER</field>
+        <field name="description" type="html">
+            <p
+            >Additional service for picking up cargo from the client to the CDEK office within the city as part of "LTL (consolidated cargo)" transportation. Additional pickup service in the sender's city, provided that the delivery tariff has "from warehouse" mode (not available for Parcel tariffs).</p>
+        </field>
+    </record>
+
+    <record id="product_product_cdek_deliv_receiver" model="product.product">
+        <field name="name">CDEK: Delivery in Recipient's City</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">DELIV_RECEIVER</field>
+        <field name="default_code">DELIV_RECEIVER</field>
+        <field name="description" type="html">
+            <p
+            >Additional service for cargo delivery in the recipient's city, provided that the delivery tariff has "to warehouse" mode (only for "LTL" tariff). Not applicable to postamat orders.</p>
+        </field>
+    </record>
+
+    <record id="product_product_cdek_trying_on" model="product.product">
+        <field name="name">CDEK: Trying On</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">TRYING_ON</field>
+        <field name="default_code">TRYING_ON</field>
+        <field name="description" type="html">
+            <p
+            >The courier delivers several units of goods (clothing, footwear, etc.) to the buyer for trying on. Only for clients with an E-commerce type contract. Not applicable in the same order with the additional service "Ban on inspection of contents". Not applicable to postamat orders.</p>
+        </field>
+    </record>
+
+    <record id="product_product_cdek_part_deliv" model="product.product">
+        <field name="name">CDEK: Partial Delivery</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">PART_DELIV</field>
+        <field name="default_code">PART_DELIV</field>
+        <field name="description" type="html">
+            <p
+            >During product delivery, the buyer can refuse one or more items and purchase only part of the order. If the order contains one item, the service is not connected (inspection cannot be added without a Photo). Not applicable to postamat orders and available only for E-commerce.</p>
+        </field>
+    </record>
+
+    <record id="product_product_cdek_danger_cargo" model="product.product">
+        <field name="name">CDEK: Dangerous Cargo</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">DANGER_CARGO</field>
+        <field name="default_code">DANGER_CARGO</field>
+        <field name="description" type="html">
+            <p
+            >In addition to regular documents and cargo, CDEK is ready to deliver shipments containing dangerous goods (except those prohibited for transportation). Due to the certain risk, the cost of delivering goods in the dangerous category is 1.5 times higher.</p>
+        </field>
+    </record>
+
+    <record id="product_product_cdek_sms" model="product.product">
+        <field name="name">CDEK: Order Delivery Notification</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">SMS</field>
+        <field name="default_code">SMS</field>
+        <field name="description" type="html">
+            <p
+            >CDEK offers each client to arrange the "SMS notification of delivery" service.
+The sender receives a message with the date and time of delivery. The cost of the service is 10 rubles.
+The sender receives an SMS with information about the date/time of delivery and the recipient's full name. For warehouse delivery mode and when specifying the recipient's mobile phone, CDEK provides all clients with a free service: "SMS notification of cargo arrival at the warehouse" or notifications as PUSH messages in the CDEK mobile app or in messengers. The recipient will receive a message with information about the pickup address and office hours.</p>
+        </field>
+    </record>
+
+    <record id="product_product_cdek_thermal_mode" model="product.product">
+        <field name="name">CDEK: Thermal Mode</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">THERMAL_MODE</field>
+        <field name="default_code">THERMAL_MODE</field>
+        <field name="description" type="html">
+            <p
+            >The service is only available with warehouse-to-warehouse delivery mode. Routes for which thermal mode delivery is possible: Kemerovo-Novokuznetsk, Novosibirsk-Krasnoyarsk, Novosibirsk-Kemerovo, Novosibirsk-Tomsk, Novosibirsk-Omsk, Novosibirsk-Barnaul, Barnaul-Gorno-Altaysk AND IN THE OPPOSITE DIRECTIONS!</p>
+        </field>
+    </record>
+
+    <record id="product_product_cdek_courier_package_a2" model="product.product">
+        <field name="name">CDEK: Courier Package A2</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">COURIER_PACKAGE_A2</field>
+        <field name="default_code">COURIER_PACKAGE_A2</field>
+        <field name="description" type="html">
+            <p>Cost — 70 rub.</p>
+        </field>
+    </record>
+
+    <record id="product_product_cdek_package_a_2_light_express" model="product.product">
+        <field name="name">CDEK: Courier Package "Light" A2 (white)</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">PACKAGE_A_2_LIGHT_EXPRESS</field>
+        <field name="default_code">PACKAGE_A_2_LIGHT_EXPRESS</field>
+        <field name="description" type="html">
+            <p
+            >Plain courier package (white) made of waterproof multilayer polyethylene.</p>
+        </field>
+    </record>
+
+    <record id="product_product_cdek_package_a_3_light_express" model="product.product">
+        <field name="name">CDEK: Courier Package "Light" A3 (white)</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">PACKAGE_A_3_LIGHT_EXPRESS</field>
+        <field name="default_code">PACKAGE_A_3_LIGHT_EXPRESS</field>
+        <field name="description" type="html">
+            <p
+            >Plain courier package (white) made of waterproof multilayer polyethylene.</p>
+        </field>
+    </record>
+
+    <record id="product_product_cdek_package_a_4_light_express" model="product.product">
+        <field name="name">CDEK: Courier Package "Light" A4 (white)</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">PACKAGE_A_4_LIGHT_EXPRESS</field>
+        <field name="default_code">PACKAGE_A_4_LIGHT_EXPRESS</field>
+        <field name="description" type="html">
+            <p
+            >Plain courier package (white) made of waterproof multilayer polyethylene.</p>
+        </field>
+    </record>
+
+    <record id="product_product_cdek_package_a_5_light_express" model="product.product">
+        <field name="name">CDEK: Courier Package "Light" A5 (white)</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">PACKAGE_A_5_LIGHT_EXPRESS</field>
+        <field name="default_code">PACKAGE_A_5_LIGHT_EXPRESS</field>
+        <field name="description" type="html">
+            <p
+            >Plain courier package (white) made of waterproof multilayer polyethylene.</p>
+        </field>
+    </record>
+
+    <record id="product_product_cdek_notify_order_created" model="product.product">
+        <field name="name">CDEK: CDEK Order Creation Notification</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">NOTIFY_ORDER_CREATED</field>
+        <field name="default_code">NOTIFY_ORDER_CREATED</field>
+        <field name="description" type="html">
+            <p>SMS notification to the recipient about order creation in CDEK.
+Applied when creating an order.
+Recipient's country: Russia, Kazakhstan, Belarus.
+When adding the additional service, the notification number will be taken from the recipient's data. Check the current cost with your assigned manager.</p>
+        </field>
+    </record>
+
+    <record id="product_product_cdek_notify_order_delivery" model="product.product">
+        <field name="name">CDEK: Order Accepted for Delivery Notification</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">NOTIFY_ORDER_DELIVERY</field>
+        <field name="default_code">NOTIFY_ORDER_DELIVERY</field>
+        <field name="description" type="html">
+            <p
+            >SMS notification about delivery to mobile phone. Recipient's country: Russia, Kazakhstan, Belarus. When adding the additional service, the notification number will be taken from the recipient's data. Check the current cost with your assigned manager.</p>
+        </field>
+    </record>
+
+    <record id="product_product_cdek_carton_box_xs" model="product.product">
+        <field name="name">CDEK: Box XS (0.5 kg 17×12×9 cm)</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">CARTON_BOX_XS</field>
+        <field name="default_code">CARTON_BOX_XS</field>
+        <field name="description" type="html">
+            <p
+            >Three-layer corrugated cardboard box 170×125×95 mm. Maximum capacity — 0.5 kg.
+Available modes: warehouse-door, warehouse-warehouse, warehouse-postamat</p>
+        </field>
+    </record>
+
+    <record id="product_product_cdek_carton_box_s_2_kilos" model="product.product">
+        <field name="name">CDEK: Box S (2 kg 23×19×10 cm)</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">CARTON_BOX_S_2_KILOS</field>
+        <field name="default_code">CARTON_BOX_S_2_KILOS</field>
+        <field name="description" type="html">
+            <p
+            >Three-layer corrugated cardboard box 230×190×100 mm. Maximum capacity — 2 kg.
+Available modes: warehouse-door, warehouse-warehouse, warehouse-postamat</p>
+        </field>
+    </record>
+
+    <record id="product_product_cdek_carton_box_m" model="product.product">
+        <field name="name">CDEK: Box M (5 kg 33×25×15 cm)</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">CARTON_BOX_M</field>
+        <field name="default_code">CARTON_BOX_M</field>
+        <field name="description" type="html">
+            <p
+            >Three-layer corrugated cardboard box 330×250×155 mm. Maximum capacity — 5 kg.
+Available modes: warehouse-door, warehouse-warehouse, warehouse-postamat</p>
+        </field>
+    </record>
+
+    <record id="product_product_cdek_carton_box_2kg" model="product.product">
+        <field name="name">CDEK: Box (2 kg 34×24×10 cm)</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">CARTON_BOX_2KG</field>
+        <field name="default_code">CARTON_BOX_2KG</field>
+        <field name="description" type="html">
+            <p
+            >Three-layer corrugated cardboard box 340×240×100 mm. Maximum capacity — 2 kg.
+Available modes: door-door, door-warehouse, warehouse-door, warehouse-warehouse, warehouse-postamat</p>
+        </field>
+    </record>
+
+    <record id="product_product_cdek_carton_box_3kg" model="product.product">
+        <field name="name">CDEK: Box (3 kg 24×24×21 cm)</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">CARTON_BOX_3KG</field>
+        <field name="default_code">CARTON_BOX_3KG</field>
+        <field name="description" type="html">
+            <p
+            >Three-layer corrugated cardboard box 240×240×210 mm. Maximum capacity — 3 kg.
+Available modes: door-door, door-warehouse, warehouse-door, warehouse-warehouse, warehouse-postamat</p>
+        </field>
+    </record>
+
+    <record id="product_product_cdek_carton_box_5kg" model="product.product">
+        <field name="name">CDEK: Box (5 kg 40×24×21 cm)</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">CARTON_BOX_5KG</field>
+        <field name="default_code">CARTON_BOX_5KG</field>
+        <field name="description" type="html">
+            <p
+            >Three-layer corrugated cardboard box 400×240×210 mm. Maximum capacity — 5 kg.
+Available modes: door-door, door-warehouse, warehouse-door, warehouse-warehouse, warehouse-postamat</p>
+        </field>
+    </record>
+
+    <record id="product_product_cdek_carton_box_10kg" model="product.product">
+        <field name="name">CDEK: Box (10 kg 40×35×28 cm)</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">CARTON_BOX_10KG</field>
+        <field name="default_code">CARTON_BOX_10KG</field>
+        <field name="description" type="html">
+            <p
+            >Three-layer corrugated cardboard box 400×350×280 mm. Maximum capacity — 10 kg.
+Available modes: warehouse-door, warehouse-warehouse, warehouse-postamat</p>
+        </field>
+    </record>
+
+    <record id="product_product_cdek_carton_box_l_12_kilos" model="product.product">
+        <field name="name">CDEK: Box (12 kg 31×25×38 cm)</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">CARTON_BOX_L_12_KILOS</field>
+        <field name="default_code">CARTON_BOX_L_12_KILOS</field>
+        <field name="description" type="html">
+            <p
+            >Three-layer corrugated cardboard box 310×250×380 mm. Maximum capacity — 12 kg.
+Available modes: warehouse-door, warehouse-warehouse, warehouse-postamat</p>
+        </field>
+    </record>
+
+    <record id="product_product_cdek_carton_box_xl_18_kilos" model="product.product">
+        <field name="name">CDEK: Box (18 kg 60×35×30 cm)</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">CARTON_BOX_XL_18_KILOS</field>
+        <field name="default_code">CARTON_BOX_XL_18_KILOS</field>
+        <field name="description" type="html">
+            <p
+            >Three-layer corrugated cardboard box 600×350×300 mm. Maximum capacity — 18 kg.
+Available modes: warehouse-door, warehouse-warehouse, warehouse-postamat</p>
+        </field>
+    </record>
+
+    <record id="product_product_cdek_carton_box_20kg" model="product.product">
+        <field name="name">CDEK: Box (20 kg 47×40×43 cm)</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">CARTON_BOX_20KG</field>
+        <field name="default_code">CARTON_BOX_20KG</field>
+        <field name="description" type="html">
+            <p
+            >Three-layer corrugated cardboard box 470×400×430 mm. Maximum capacity — 20 kg.
+Available modes: warehouse-door, warehouse-warehouse</p>
+        </field>
+    </record>
+
+    <record id="product_product_cdek_carton_box_30kg" model="product.product">
+        <field name="name">CDEK: Box (30 kg 69×39×42 cm)</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">CARTON_BOX_30KG</field>
+        <field name="default_code">CARTON_BOX_30KG</field>
+        <field name="description" type="html">
+            <p
+            >Three-layer corrugated cardboard box 690×390×420 mm. Maximum capacity — 30 kg.
+Available modes: warehouse-door, warehouse-warehouse</p>
+        </field>
+    </record>
+
+    <record id="product_product_cdek_bubble_wrap" model="product.product">
+        <field name="name">CDEK: Bubble Wrap</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">BUBBLE_WRAP</field>
+        <field name="default_code">BUBBLE_WRAP</field>
+        <field name="description" type="html">
+            <p
+            >High-pressure polyethylene, two-layer. Additional packaging material for packing shipments into transport packaging.
+Available for all warehouse tariffs.</p>
+        </field>
+    </record>
+
+    <record id="product_product_cdek_waste_paper" model="product.product">
+        <field name="name">CDEK: Waste Paper</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">WASTE_PAPER</field>
+        <field name="default_code">WASTE_PAPER</field>
+        <field name="description" type="html">
+            <p>Packaging paper (recycled, class E). Width 0.42 m.
+Designed for packing various types of shipments (cargo) and filling voids inside the packaging.
+Available modes: door-door, door-warehouse, warehouse-door, warehouse-warehouse, door-postamat, warehouse-postamat</p>
+        </field>
+    </record>
+
+    <record id="product_product_cdek_carton_filler" model="product.product">
+        <field name="name">CDEK: Pressed Cardboard "Filler" (55×14×2.3 cm)</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">CARTON_FILLER</field>
+        <field name="default_code">CARTON_FILLER</field>
+        <field name="description" type="html">
+            <p>Protective insert made of sheet pressed cardboard.
+Used for:
+- internal bracing inside corrugated box
+- wrapping and separating contents inside corrugated box
+- filling voids.
+Available for all warehouse tariffs.</p>
+        </field>
+    </record>
+
+    <record id="product_product_cdek_xl_box_inner_crate" model="product.product">
+        <field name="name">CDEK: Inner Crate "Box XL"</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">XL_BOX_INNER_CRATE</field>
+        <field name="default_code">XL_BOX_INNER_CRATE</field>
+        <field name="description" type="html">
+            <p
+            >Protective insert (shock-absorbing cardboard frame) inserted inside the box. The frame is designed for the specific box "Box (18 kg 60×35×30 cm)". This additional service must be passed only together with the corresponding box CARTON_BOX_XL_18_KILOS.</p>
+        </field>
+    </record>
+
+    <record id="product_product_cdek_20_kg_box_inner_crate" model="product.product">
+        <field name="name">CDEK: Inner Crate "Box up to 20 kg"</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">20_KG_BOX_INNER_CRATE</field>
+        <field name="default_code">20_KG_BOX_INNER_CRATE</field>
+        <field name="description" type="html">
+            <p
+            >Protective insert (shock-absorbing cardboard frame) inserted inside the box. The frame is designed for the specific box "Box (20 kg 47×40×43 cm)". This additional service must be passed only together with the corresponding box CARTON_BOX_20KG.</p>
+        </field>
+    </record>
+
+    <record id="product_product_cdek_30_kg_box_inner_crate" model="product.product">
+        <field name="name">CDEK: Inner Crate "Box up to 30 kg"</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">30_KG_BOX_INNER_CRATE</field>
+        <field name="default_code">30_KG_BOX_INNER_CRATE</field>
+        <field name="description" type="html">
+            <p
+            >Protective insert (shock-absorbing cardboard frame) inserted inside the box. The frame is designed for the specific box "Box (30 kg 69×39×42 cm)". This additional service must be passed only together with the corresponding box CARTON_BOX_30KG.</p>
+        </field>
+    </record>
+
+    <record id="product_product_cdek_ban_attachment_inspection" model="product.product">
+        <field name="name">CDEK: Ban on Inspection of Contents</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">BAN_ATTACHMENT_INSPECTION</field>
+        <field name="default_code">BAN_ATTACHMENT_INSPECTION</field>
+        <field name="description" type="html">
+            <p
+            >Allows prohibition of contents inspection. Provided for e-commerce. Not compatible with additional services "Trying on at home" and "Partial delivery". Service is not provided to postamat. Only for clients with E-commerce type contract. Cost — 0 rubles.</p>
+        </field>
+    </record>
+
+    <record id="product_product_cdek_get_up_floor_by_hand" model="product.product">
+        <field name="name">CDEK: Floor Ascent (by stairs)</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">GET_UP_FLOOR_BY_HAND</field>
+        <field name="default_code">GET_UP_FLOOR_BY_HAND</field>
+        <field name="description" type="html">
+            <p
+            >Manual floor ascent, with additional parameter — number of floors. The service is provided when it is necessary to carry oversized and heavy shipments (weighing from 10 kg) to a floor. (limit 150 kg)</p>
+        </field>
+    </record>
+
+    <record id="product_product_cdek_get_up_floor_by_elevator" model="product.product">
+        <field name="name">CDEK: Floor Ascent (by elevator)</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">GET_UP_FLOOR_BY_ELEVATOR</field>
+        <field name="default_code">GET_UP_FLOOR_BY_ELEVATOR</field>
+        <field name="description" type="html">
+            <p
+            >Elevator ascent to floor, without additional parameter. The service is provided when it is necessary to carry oversized and heavy shipments (weighing from 10 kg) to a floor. (limit 150 kg)</p>
+        </field>
+    </record>
+
+    <record id="product_product_cdek_adult_goods" model="product.product">
+        <field name="name">CDEK: 18+</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">ADULT_GOODS</field>
+        <field name="default_code">ADULT_GOODS</field>
+        <field name="description" type="html">
+            <p
+            >Recipient age verification service (18+ goods). The service is offered only when the 18+ feature is present in the contract.</p>
+        </field>
+    </record>
+
+    <record
+        id="product_product_cdek_loading_operations_at_the_sender"
+        model="product.product"
+    >
+        <field name="name">CDEK: Loading Operations at Sender</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">LOADING_OPERATIONS_AT_THE_SENDER</field>
+        <field name="default_code">LOADING_OPERATIONS_AT_THE_SENDER</field>
+        <field name="description" type="html">
+            <p
+            >Loading and unloading at the client's address, if the weight of cargo units does not exceed 80 kg.
+Additional service available only for tariffs:
+Mainline Super Express
+Mainline Express
+LTL (Consolidated Cargo)
+Economy Parcel
+Express</p>
+        </field>
+    </record>
+
+    <record
+        id="product_product_cdek_load_the_operation_at_the_recipient"
+        model="product.product"
+    >
+        <field name="name">CDEK: Loading Operations at Recipient</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">LOAD_THE_OPERATION_AT_THE_RECIPIENT</field>
+        <field name="default_code">LOAD_THE_OPERATION_AT_THE_RECIPIENT</field>
+        <field name="description" type="html">
+            <p
+            >Loading and unloading at the client's address, if the weight of cargo units does not exceed 80 kg.
+Additional service available only for tariffs:
+Mainline Super Express
+Mainline Express
+LTL (Consolidated Cargo)
+Economy Parcel
+Express</p>
+        </field>
+    </record>
+
+    <record id="product_product_cdek_envelope_a4_cdek_free" model="product.product">
+        <field name="name">CDEK: Cardboard A4 Envelope (free)</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">ENVELOPE_A4_CDEK_FREE</field>
+        <field name="default_code">ENVELOPE_A4_CDEK_FREE</field>
+        <field name="description" type="html">
+            <p>Free cardboard A4 envelope</p>
+        </field>
+    </record>
+
+    <record id="product_product_cdek_customs_clearance" model="product.product">
+        <field name="name">CDEK: Customs Clearance</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">CUSTOMS_CLEARANCE</field>
+        <field name="default_code">CUSTOMS_CLEARANCE</field>
+        <field name="description" type="html">
+            <p
+            >Customs clearance as part of the B2B international cargo delivery service. Charged automatically when creating international orders with "Business Standard"/"Business Express" tariffs.</p>
+        </field>
+    </record>
+
+    <record id="product_product_cdek_another" model="product.product">
+        <field name="name">CDEK: Other</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">ANOTHER</field>
+        <field name="default_code">ANOTHER</field>
+        <field name="description" type="html">
+            <p
+            >Service for adding additional services, charged by CDEK manager. Not allowed for independent entry in services.code field.</p>
+        </field>
+    </record>
+
+    <record
+        id="product_product_cdek_sms_notifications_for_the_recipient"
+        model="product.product"
+    >
+        <field name="name">CDEK: SMS Notification of Order Arrival</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">SMS_NOTIFICATIONS_FOR_THE_RECIPIENT</field>
+        <field name="default_code">SMS_NOTIFICATIONS_FOR_THE_RECIPIENT</field>
+        <field name="description" type="html">
+            <p
+            >SMS notification of order arrival for the recipient. Available for "E-commerce" type orders.</p>
+        </field>
+    </record>
+
+    <record
+        id="product_product_cdek_sms_notifications_for_expiration_date"
+        model="product.product"
+    >
+        <field name="name">CDEK: SMS Notification of Storage Period Expiration</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">SMS_NOTIFICATIONS_FOR_EXPIRATION_DATE</field>
+        <field name="default_code">SMS_NOTIFICATIONS_FOR_EXPIRATION_DATE</field>
+        <field name="description" type="html">
+            <p
+            >SMS notification of storage period expiration for the recipient. Available for "E-commerce" type orders.</p>
+        </field>
+    </record>
+
+    <record id="product_product_cdek_exp_regist_with_doc" model="product.product">
+        <field name="name">CDEK: Export Customs Clearance (with documents)</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">EXP_REGIST_WITH_DOC</field>
+        <field name="default_code">EXP_REGIST_WITH_DOC</field>
+        <field name="description" type="html">
+            <p>Export customs clearance (with document package)</p>
+        </field>
+    </record>
+
+    <record id="product_product_cdek_exp_regist_without_doc" model="product.product">
+        <field name="name">CDEK: Export Customs Clearance (without documents)</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">EXP_REGIST_WITHOUT_DOC</field>
+        <field name="default_code">EXP_REGIST_WITHOUT_DOC</field>
+        <field name="description" type="html">
+            <p>Export customs clearance (without document package)</p>
+        </field>
+    </record>
+
+    <record id="product_product_cdek_exp_regist" model="product.product">
+        <field name="name">CDEK: Export Customs Clearance</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">EXP_REGIST</field>
+        <field name="default_code">EXP_REGIST</field>
+        <field name="description" type="html">
+            <p>Export customs clearance</p>
+        </field>
+    </record>
+
+    <record
+        id="product_product_cdek_custom_clearence_for_last_mile_b2b_200"
+        model="product.product"
+    >
+        <field name="name">CDEK: Customs Clearance for Last Mile B2B 200-</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">CUSTOM_CLEARENCE_FOR_LAST_MILE_B2B_200</field>
+        <field name="default_code">CUSTOM_CLEARENCE_FOR_LAST_MILE_B2B_200</field>
+        <field name="description" type="html">
+            <p>Customs clearance for last mile B2B 200-</p>
+        </field>
+    </record>
+
+    <record
+        id="product_product_cdek_customs_clearance_for_the_last_mile"
+        model="product.product"
+    >
+        <field name="name">CDEK: Customs Clearance for Last Mile</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">CUSTOMS_CLEARANCE_FOR_THE_LAST_MILE</field>
+        <field name="default_code">CUSTOMS_CLEARANCE_FOR_THE_LAST_MILE</field>
+        <field name="description" type="html">
+            <p>Customs clearance for last mile</p>
+        </field>
+    </record>
+
+    <record
+        id="product_product_cdek_custom_clearence_for_last_mile_b2b_200469"
+        model="product.product"
+    >
+        <field name="name">CDEK: Customs Clearance for Last Mile B2B 200+</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">CUSTOM_CLEARENCE_FOR_LAST_MILE_B2B_200469</field>
+        <field name="default_code">CUSTOM_CLEARENCE_FOR_LAST_MILE_B2B_200469</field>
+        <field name="description" type="html">
+            <p>Customs clearance for last mile B2B 200+</p>
+        </field>
+    </record>
+
+    <record
+        id="product_product_cdek_custom_clearence_for_b2b_1000_export"
+        model="product.product"
+    >
+        <field name="name">CDEK: Customs Clearance B2B 1000+ Export</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">CUSTOM_CLEARENCE_FOR_B2B_1000_EXPORT</field>
+        <field name="default_code">CUSTOM_CLEARENCE_FOR_B2B_1000_EXPORT</field>
+        <field name="description" type="html">
+            <p>Customs clearance B2B 1000+ export</p>
+        </field>
+    </record>
+
+    <record
+        id="product_product_cdek_custom_clearence_for_b2b_200_import"
+        model="product.product"
+    >
+        <field name="name">CDEK: Customs Clearance B2B 200+ Import</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">CUSTOM_CLEARENCE_FOR_B2B_200_IMPORT</field>
+        <field name="default_code">CUSTOM_CLEARENCE_FOR_B2B_200_IMPORT</field>
+        <field name="description" type="html">
+            <p>Customs clearance B2B 200+ import</p>
+        </field>
+    </record>
+
+    <record
+        id="product_product_cdek_self_clearing_customs_for_b2b_export"
+        model="product.product"
+    >
+        <field name="name">CDEK: Self-Customs Clearance B2B Export</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">SELF_CLEARING_CUSTOMS_FOR_B2B_EXPORT</field>
+        <field name="default_code">SELF_CLEARING_CUSTOMS_FOR_B2B_EXPORT</field>
+        <field name="description" type="html">
+            <p>Self-customs clearance B2B export</p>
+        </field>
+    </record>
+
+    <record
+        id="product_product_cdek_self_clearing_customs_for_b2b_import"
+        model="product.product"
+    >
+        <field name="name">CDEK: Self-Customs Clearance B2B Import</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">SELF_CLEARING_CUSTOMS_FOR_B2B_IMPORT</field>
+        <field name="default_code">SELF_CLEARING_CUSTOMS_FOR_B2B_IMPORT</field>
+        <field name="description" type="html">
+            <p>Self-customs clearance B2B import</p>
+        </field>
+    </record>
+
+    <record id="product_product_cdek_photo_of_documents" model="product.product">
+        <field name="name">CDEK: Photo of Documents</field>
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="cdek_reference">PHOTO_OF_DOCUMENTS</field>
+        <field name="default_code">PHOTO_OF_DOCUMENTS</field>
+        <field name="description" type="html">
+            <p
+            >Designed for product deliveries (cargo, documents) with recipient identification, photographing of client's goods/signed documents</p>
+        </field>
+    </record>
+
+
+</odoo>

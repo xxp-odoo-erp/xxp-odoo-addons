@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!--
+    Copyright (C) 2025 XXP
+    License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
+    -->
+    <record id="sale_order_cdek_service_form_view" model="ir.ui.view">
+        <field name="name">sale.order.cdek.service.form.view</field>
+        <field name="model">sale.order.cdek.service</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="order_id" invisible="1" />
+                        <field name="product_id" string="Service" />
+                        <field name="product_cdek_reference_type" invisible="1" />
+                        <field
+                            name="counter_value"
+                            attrs="{'invisible': [('product_cdek_reference_type', '!=', 'counter')], 'required': [('product_cdek_reference_type', '=', 'counter')]}"
+                            widget="integer"
+                            string="Quantity of packages"
+                            placeholder="For example, 1"
+                        />
+                        <field
+                            name="price_value"
+                            attrs="{'invisible': [('product_cdek_reference_type', '!=', 'price')], 'required': [('product_cdek_reference_type', '=', 'price')]}"
+                            widget="float"
+                            string="Insurance value"
+                            placeholder="For example, 1000.00"
+                        />
+                        <field
+                            name="length_value"
+                            attrs="{'invisible': [('product_cdek_reference_type', '!=', 'length')], 'required': [('product_cdek_reference_type', '=', 'length')]}"
+                            widget="float"
+                            string="Length of packaging material"
+                            placeholder="For example, 1.00"
+                        />
+                        <field
+                            name="phone_value"
+                            attrs="{'invisible': [('product_cdek_reference_type', '!=', 'phone')], 'required': [('product_cdek_reference_type', '=', 'phone')]}"
+                            widget="phone"
+                            string="Phone number"
+                            placeholder="For example, +79999999999"
+                        />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="sale_order_cdek_service_tree_view" model="ir.ui.view">
+        <field name="name">sale.order.cdek.service.tree.view</field>
+        <field name="model">sale.order.cdek.service</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="product_id" string="Service" />
+                <field name="value" />
+                <field name="company_currency_id" invisible="1" />
+                <field name="order_id" invisible="1" />
+                <field
+                    name="total_price"
+                    widget="monetary"
+                    options="{'currency_field': 'company_currency_id'}"
+                />
+            </tree>
+        </field>
+    </record>
+
+    <record id="sale_order_cdek_service_kanban_view" model="ir.ui.view">
+        <field name="name">sale.order.cdek.service.kanban.view</field>
+        <field name="model">sale.order.cdek.service</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="order_id" />
+                <field name="product_id" />
+                <field name="product_cdek_reference_type" />
+                <field name="value" />
+                <field name="company_currency_id" />
+                <field name="total_price" />
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click">
+                            <div class="o_kanban_image">
+                                <img
+                                    alt="Service image"
+                                    t-att-src="kanban_image('product.product',  'image_128', record.product_id.raw_value)"
+                                />
+                            </div>
+                            <div class="oe_kanban_details">
+                                <t
+                                    t-set="service_type"
+                                    t-value="record.product_cdek_reference_type.raw_value"
+                                />
+                                <strong><field name="product_id" /></strong><br />
+                                <t t-if="service_type == 'counter'">
+                                    <span>Quantity of packages: </span><field
+                                        name="counter_value"
+                                    />
+                                </t>
+                                <t t-if="service_type == 'price'">
+                                    <span>Insurance value: </span><field
+                                        name="price_value"
+                                    />
+                                </t>
+                                <t t-if="service_type == 'length'">
+                                    <span>Length of packaging material: </span><field
+                                        name="length_value"
+                                    />
+                                </t>
+                                <t t-if="service_type == 'phone'">
+                                    <span>Phone number: </span><field
+                                        name="phone_value"
+                                    />
+                                </t>
+                                <br t-if="service_type" />
+                                <field name="company_currency_id" invisible="1" />
+                                Price: <field
+                                    name="total_price"
+                                    widget="monetary"
+                                    options="{'currency_field': 'company_currency_id'}"
+                                />
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+
+</odoo>

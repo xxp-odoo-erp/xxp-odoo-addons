@@ -1,0 +1,17 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_cdek_rate_system,access.cdek.rate.system,model_cdek_tariff,base.group_system,1,1,1,1
+access_cdek_rate_user,access.cdek.rate.system,model_cdek_tariff,base.group_user,1,0,0,0
+access_cdek_rate_type_system,access.cdek.rate.type.system,model_cdek_tariff_mode,base.group_system,1,1,1,1
+access_cdek_rate_type_user,access.cdek.rate.type.system,model_cdek_tariff_mode,base.group_user,1,0,0,0
+
+access_sale_order_cdek_service_portal,sale.order.cdek.service.portal,model_sale_order_cdek_service,base.group_portal,1,0,0,0
+access_sale_order_cdek_service_readonly,sale.order.cdek.service.accountant,model_sale_order_cdek_service,account.group_account_readonly,1,0,0,0
+access_sale_order_cdek_service_invoicing_payments,sale.order.cdek.service,model_sale_order_cdek_service,account.group_account_invoice,1,1,1,1
+access_sale_order_cdek_service_accountant,sale.order.cdek.service.accountant,model_sale_order_cdek_service,account.group_account_user,1,1,1,1
+
+access_sale_order_cdek_service_user,access.sale.order.cdek.service,model_sale_order_cdek_service,sales_team.group_sale_salesman,1,1,1,1
+
+access_choose_delivery_carrier_user,access.choose.delivery.carrier,model_choose_delivery_carrier,sales_team.group_sale_salesman,1,1,1,0
+
+access_search_cdek_office_user,access.search.cdek.office,model_search_cdek_office,base.group_user,1,1,1,1
+access_search_cdek_office_line_user,access.search.cdek.office.line,model_search_cdek_office_line,base.group_user,1,1,1,1

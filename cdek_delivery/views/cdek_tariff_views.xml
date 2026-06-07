@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!--
+    Copyright (C) 2025 XXP
+    License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
+    -->
+
+    <record id="cdek_tariff_tree_view" model="ir.ui.view">
+        <field name="name">cdek.tariff.tree.view</field>
+        <field name="model">cdek.tariff</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="cdek_tariff_form_view" model="ir.ui.view">
+        <field name="name">cdek.tariff.form.view</field>
+        <field name="model">cdek.tariff</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title" name="title">
+                        <label for="name" string="Tariff Name" />
+                        <h1>
+                            <field name="name" />
+                        </h1>
+                    </div>
+                    <group>
+                        <group string="Weight">
+                            <field name="weight_min" />
+                            <field name="weight_max" />
+                            <field name="weight_calc_max" />
+                        </group>
+                        <group string="Size">
+                            <field name="length_min" />
+                            <field name="length_max" />
+                            <field name="width_min" />
+                            <field name="width_max" />
+                            <field name="height_min" />
+                            <field name="height_max" />
+                        </group>
+                    </group>
+                    <field name="mode_ids" widget="one2many" nolabel="1">
+                        <tree>
+                            <field name="tariff_id" invisible="1" />
+                            <field name="name" />
+                            <field name="mode" />
+                            <field name="code" />
+                            <field name="delivery_from" />
+                            <field name="delivery_to" />
+                        </tree>
+                    </field>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_open_cdek_tariffs" model="ir.actions.act_window">
+        <field name="name">CDEK Tariffs</field>
+        <field name="res_model">cdek.tariff</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
