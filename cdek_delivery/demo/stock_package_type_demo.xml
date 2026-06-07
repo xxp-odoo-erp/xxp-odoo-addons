@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!--
+    Copyright (C) 2025 XXP
+    License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
+    -->
+
+    <record id="cdek_package_type_box_demo" model="stock.package.type">
+        <field name="name">Box</field>
+        <field name="packaging_length">50</field>
+        <field name="width">50</field>
+        <field name="height">50</field>
+        <field name="base_weight">0.1</field>
+        <field name="max_weight">10</field>
+    </record>
+
+</odoo>

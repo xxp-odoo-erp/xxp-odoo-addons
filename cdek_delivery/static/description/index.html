@@ -1,0 +1,721 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils: https://docutils.sourceforge.io/" />
+<title>CDEK Delivery</title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 9511 2024-01-13 09:50:07Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+Despite the name, some widely supported CSS2 features are used.
+
+See https://docutils.sourceforge.io/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+.subscript {
+  vertical-align: sub;
+  font-size: smaller }
+
+.superscript {
+  vertical-align: super;
+  font-size: smaller }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title, .code .error {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left, table.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right, table.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table.align-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+.align-top    {
+  vertical-align: top }
+
+.align-middle {
+  vertical-align: middle }
+
+.align-bottom {
+  vertical-align: bottom }
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math, pre.code {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+pre.code .ln { color: gray; } /* line numbers */
+pre.code, code { background-color: #eeeeee }
+pre.code .comment, code .comment { color: #5C6576 }
+pre.code .keyword, code .keyword { color: #3B0D06; font-weight: bold }
+pre.code .literal.string, code .literal.string { color: #0C5404 }
+pre.code .name.builtin, code .name.builtin { color: #352B84 }
+pre.code .deleted, code .deleted { background-color: #DEB0A1}
+pre.code .inserted, code .inserted { background-color: #A3D289}
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic, pre.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+/* "booktabs" style (no vertical lines) */
+table.docutils.booktabs {
+  border: 0px;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-collapse: collapse;
+}
+table.docutils.booktabs * {
+  border: 0px;
+}
+table.docutils.booktabs th {
+  border-bottom: thin solid;
+  text-align: left;
+}
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document" id="cdek-delivery">
+<h1 class="title">CDEK Delivery</h1>
+
+<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!! This file is generated by oca-gen-addon-readme !!
+!! changes will be overwritten.                   !!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!! source digest: sha256:f23e8069bcfb18f47a7185ef75f7cba14a25b275eb3c12dec41d291fbbf15740
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+<p><a class="reference external image-reference" href="https://odoo-community.org/page/development-status"><img alt="Beta" src="https://img.shields.io/badge/maturity-Beta-yellow.png" /></a> <a class="reference external image-reference" href="http://www.gnu.org/licenses/lgpl-3.0-standalone.html"><img alt="License: LGPL-3" src="https://img.shields.io/badge/license-LGPL--3-blue.png" /></a> <a class="reference external image-reference" href="https://github.com/xxp-odoo-erp/xxp-delivery/tree/16.0/cdek_delivery"><img alt="xxp-odoo-erp/xxp-delivery" src="https://img.shields.io/badge/github-xxp--odoo--erp%2Fxxp--delivery-lightgray.png?logo=github" /></a></p>
+<p>This module extends the functionality of delivery carriers in Odoo to
+support integration with CDEK delivery service and allows users to ship
+parcels through CDEK delivery service with full API integration. The
+module provides automatic calculation of delivery costs based on package
+dimensions and weight, supports various delivery methods (door-to-door,
+door-to-office, office-to-office, terminal, postbox) and allows
+creating, tracking, and canceling shipments directly from Odoo.</p>
+<div class="section" id="features">
+<h1>Features</h1>
+<ul class="simple">
+<li><strong>Full API integration</strong> — Integration with CDEK delivery via API</li>
+<li><strong>Automatic cost calculation</strong> — Delivery cost by package dimensions
+and weight</li>
+<li><strong>Delivery methods</strong> — Door-to-door, door-to-office, office-to-office,
+terminal, postbox</li>
+<li><strong>Shipment lifecycle</strong> — Creating, tracking and canceling shipments
+from Odoo</li>
+<li><strong>Tariffs and tariff types</strong> — CDEK tariffs and types, e-commerce and
+standard delivery</li>
+<li><strong>Partner delivery preferences</strong> — Per-partner settings: office codes
+and delivery types</li>
+<li><strong>Additional CDEK services</strong> — Insurance, packaging, notifications and
+others when placing orders</li>
+<li><strong>Online tracking</strong> — Tracking via CDEK tracking system</li>
+<li><strong>Transport waybills</strong> — Generation of transport waybills</li>
+</ul>
+<!--  -->
+<blockquote>
+<strong>If you want additional features, please get in touch with the XXP
+team, or you are welcome to contribute</strong></blockquote>
+<p><strong>Table of contents</strong></p>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#installation" id="toc-entry-1">Installation</a><ul>
+<li><a class="reference internal" href="#prerequisites" id="toc-entry-2">Prerequisites</a></li>
+<li><a class="reference internal" href="#installation-of-python-cdek-library" id="toc-entry-3">Installation of Python CDEK Library</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#configuration" id="toc-entry-4">Configuration</a><ul>
+<li><a class="reference internal" href="#obtain-cdek-api-credentials" id="toc-entry-5">Obtain CDEK API Credentials</a></li>
+<li><a class="reference internal" href="#configure-cdek-carrier" id="toc-entry-6">Configure CDEK Carrier</a><ul>
+<li><a class="reference internal" href="#step-1-accessing-delivery-settings" id="toc-entry-7">Step 1: Accessing Delivery Settings</a></li>
+<li><a class="reference internal" href="#step-2-basic-configuration" id="toc-entry-8">Step 2: Basic Configuration</a></li>
+<li><a class="reference internal" href="#step-3-cdek-configuration" id="toc-entry-9">Step 3: CDEK Configuration</a></li>
+<li><a class="reference internal" href="#step-4-options" id="toc-entry-10">Step 4: Options</a></li>
+<li><a class="reference internal" href="#step-5-configure-warehouse-or-recipient-address-for-cdek-delivery" id="toc-entry-11">Step 5: Configure Warehouse or Recipient Address for CDEK Delivery</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#configure-partner-record-for-cdek" id="toc-entry-12">Configure Partner record for CDEK</a></li>
+<li><a class="reference internal" href="#manage-cdek-services" id="toc-entry-13">Manage CDEK Services</a></li>
+<li><a class="reference internal" href="#configure-packages" id="toc-entry-14">Configure Packages</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#usage" id="toc-entry-15">Usage</a><ul>
+<li><a class="reference internal" href="#sale-flow-with-cdek-delivery" id="toc-entry-16">Sale Flow with CDEK delivery</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="installation">
+<h2><a class="toc-backref" href="#toc-entry-1">Installation</a></h2>
+<div class="section" id="prerequisites">
+<h3><a class="toc-backref" href="#toc-entry-2">Prerequisites</a></h3>
+<p>The module depends on the following Odoo modules:</p>
+<ul class="simple">
+<li><strong>delivery</strong> (base delivery module)</li>
+</ul>
+</div>
+<div class="section" id="installation-of-python-cdek-library">
+<h3><a class="toc-backref" href="#toc-entry-3">Installation of Python CDEK Library</a></h3>
+<p>Mention the library can be installed with command “pip install cdek” you
+can check the library <a class="reference external" href="https://pypi.org/project/cdek/">https://pypi.org/project/cdek/</a></p>
+</div>
+</div>
+<div class="section" id="configuration">
+<h2><a class="toc-backref" href="#toc-entry-4">Configuration</a></h2>
+<div class="section" id="obtain-cdek-api-credentials">
+<h3><a class="toc-backref" href="#toc-entry-5">Obtain CDEK API Credentials</a></h3>
+<ol class="arabic simple">
+<li>Register in the CDEK personal account: <a class="reference external" href="https://www.cdek.ru/">https://www.cdek.ru/</a></li>
+<li>Obtain API credentials (Client ID and Client Secret)</li>
+<li>Save these credentials for later configuration</li>
+</ol>
+</div>
+<div class="section" id="configure-cdek-carrier">
+<h3><a class="toc-backref" href="#toc-entry-6">Configure CDEK Carrier</a></h3>
+<div class="section" id="step-1-accessing-delivery-settings">
+<h4><a class="toc-backref" href="#toc-entry-7">Step 1: Accessing Delivery Settings</a></h4>
+<ol class="arabic simple">
+<li>Go to <strong>Inventory &gt; Configuration &gt; Shipping Methods</strong></li>
+<li>Find the carrier “CDEK Delivery”</li>
+</ol>
+<p><img alt="image1" src="https://raw.githubusercontent.com/xxp-odoo-erp/xxp-delivery/16.0/cdek_delivery/static/img/cdek_conf_1.png" /></p>
+</div>
+<div class="section" id="step-2-basic-configuration">
+<h4><a class="toc-backref" href="#toc-entry-8">Step 2: Basic Configuration</a></h4>
+<ol class="arabic simple">
+<li>Open the CDEK carrier form</li>
+<li>Make sure the <strong>Provider</strong> field is set to “CDEK”</li>
+<li>Make sure the <strong>Delivery Product</strong> field is set to “CDEK Delivery”</li>
+</ol>
+</div>
+<div class="section" id="step-3-cdek-configuration">
+<h4><a class="toc-backref" href="#toc-entry-9">Step 3: CDEK Configuration</a></h4>
+<p>Go to the <strong>CDEK Configuration</strong> tab and fill in the following
+parameters:</p>
+<p><strong>API Credentials (for production environment)</strong></p>
+<ol class="arabic simple">
+<li>Activate Production Environment mode using the smart button in the
+upper-right corner of the carrier form</li>
+<li>Enter <strong>CDEK Client ID</strong> — client identifier from CDEK</li>
+<li>Enter <strong>CDEK Client Secret</strong> — client secret key from CDEK</li>
+</ol>
+<!--  -->
+<blockquote>
+<strong>Important:</strong> If Production Environment mode is not activated, test
+credentials will be used.</blockquote>
+<p><strong>Loading Tariffs</strong></p>
+<ol class="arabic simple">
+<li>Click the <strong>Load Tariffs</strong> button next to the <strong>Available Tariffs</strong>
+field<ul>
+<li>This will load all available tariffs from the CDEK API</li>
+</ul>
+</li>
+<li>Select the required tariffs from the <strong>Available Tariffs</strong> dropdown</li>
+</ol>
+<!--  -->
+<blockquote>
+<strong>Important:</strong> Please consult your CDEK manager for suitable tariffs.</blockquote>
+<p><img alt="image2" src="https://raw.githubusercontent.com/xxp-odoo-erp/xxp-delivery/16.0/cdek_delivery/static/img/cdek_conf_2.png" /></p>
+</div>
+<div class="section" id="step-4-options">
+<h4><a class="toc-backref" href="#toc-entry-10">Step 4: Options</a></h4>
+<p>Configure additional parameters:</p>
+<ol class="arabic">
+<li><p class="first"><strong>Type</strong>:</p>
+<ul class="simple">
+<li>“E-Commerce” (1) — for online stores</li>
+<li>“Delivery” (2) — for standard delivery</li>
+</ul>
+</li>
+<li><p class="first"><strong>Print Type</strong>:</p>
+<p>Used for uploading printed documents for order fulfillment.</p>
+<blockquote>
+<p><strong>Important:</strong> This functionality will be available in PRO
+version*</p>
+</blockquote>
+<ul class="simple">
+<li>“Waybill” — waybill printing</li>
+<li>“Barcode” — barcode printing</li>
+</ul>
+</li>
+<li><p class="first"><strong>Default Delivery Type</strong>:</p>
+<ul class="simple">
+<li>“Door” — shipment from warehouse/office</li>
+<li>“Office” — shipment from CDEK pickup point</li>
+<li>“Terminal” — shipment from CDEK terminal</li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="section" id="step-5-configure-warehouse-or-recipient-address-for-cdek-delivery">
+<h4><a class="toc-backref" href="#toc-entry-11">Step 5: Configure Warehouse or Recipient Address for CDEK Delivery</a></h4>
+<ol class="arabic simple">
+<li>Go to <strong>Inventory &gt; Configuration &gt; Warehouses</strong></li>
+<li>Select a warehouse record and open the address partner record</li>
+</ol>
+<p><img alt="image3" src="https://raw.githubusercontent.com/xxp-odoo-erp/xxp-delivery/16.0/cdek_delivery/static/img/cdek_conf_3.png" /></p>
+</div>
+</div>
+<div class="section" id="configure-partner-record-for-cdek">
+<h3><a class="toc-backref" href="#toc-entry-12">Configure Partner record for CDEK</a></h3>
+<ol class="arabic">
+<li><p class="first">Go to the partner record</p>
+</li>
+<li><p class="first">Open the <strong>Sales &amp; Purchases</strong> tab &gt; <strong>CDEK</strong> section</p>
+</li>
+<li><p class="first">Specify <strong>Delivery Type</strong></p>
+</li>
+<li><p class="first">If <strong>Delivery Type</strong> is “Door”, fill in the required contact
+information:</p>
+<ul class="simple">
+<li><strong>City</strong> — city</li>
+<li><strong>Street</strong> — street and address</li>
+<li><strong>Country</strong> — country</li>
+<li><strong>Zip</strong> (optional) — postal code</li>
+<li><strong>Phone</strong> — phone number</li>
+</ul>
+</li>
+<li><p class="first">If <strong>Delivery Type</strong> is “Office/Postbox”:</p>
+<ul class="simple">
+<li>Click the <strong>Search Office</strong> button</li>
+</ul>
+<p>In the wizard:</p>
+<ul class="simple">
+<li>Fill in the required fields</li>
+<li>Click the <strong>Load</strong>/<strong>Reload</strong> button</li>
+<li>Click the <strong>Select</strong> button for the selected record</li>
+</ul>
+</li>
+</ol>
+<p><img alt="image4" src="https://raw.githubusercontent.com/xxp-odoo-erp/xxp-delivery/16.0/cdek_delivery/static/img/cdek_conf_4.png" /></p>
+<ol class="arabic simple" start="6">
+<li>Select the delivery tariff from <strong>Tariff</strong></li>
+<li><strong>Contragent Type</strong> is automatically determined based on partner type
+(company/individual):<ul>
+<li>“Legal Entity” — legal entity</li>
+<li>“Individual” — individual</li>
+</ul>
+</li>
+</ol>
+<p><img alt="image5" src="https://raw.githubusercontent.com/xxp-odoo-erp/xxp-delivery/16.0/cdek_delivery/static/img/cdek_conf_5.png" /></p>
+</div>
+<div class="section" id="manage-cdek-services">
+<h3><a class="toc-backref" href="#toc-entry-13">Manage CDEK Services</a></h3>
+<blockquote>
+<strong>Note:</strong> Most services are already pre-configured, so you generally
+don’t need to configure them unless CDEK has updated the list.</blockquote>
+<ol class="arabic simple">
+<li>Go to <strong>Products &gt; Products</strong> (remember to clear any preset filters)</li>
+<li>Create a new product or open an existing one</li>
+<li>Set product type as <strong>Service</strong></li>
+<li>Select <strong>CDEK Reference</strong> from <a class="reference external" href="https://apidoc.cdek.ru/#tag/common/Prilozheniya/Prilozhenie-6.-Dopolnitelnye-uslugi">available
+services</a></li>
+<li>When selecting a CDEK service reference:<ul>
+<li>The product is automatically configured as a service (not for
+sale/purchase)</li>
+<li>The CDEK service code is copied to the Internal Reference field</li>
+</ul>
+</li>
+</ol>
+<p><img alt="image6" src="https://raw.githubusercontent.com/xxp-odoo-erp/xxp-delivery/16.0/cdek_delivery/static/img/cdek_conf_6.png" /></p>
+</div>
+<div class="section" id="configure-packages">
+<h3><a class="toc-backref" href="#toc-entry-14">Configure Packages</a></h3>
+<blockquote>
+<strong>Note:</strong> Enable <strong>Packages</strong> in <strong>Settings &gt; Inventory &gt;
+Operations</strong>.</blockquote>
+<p><img alt="image7" src="https://raw.githubusercontent.com/xxp-odoo-erp/xxp-delivery/16.0/cdek_delivery/static/img/cdek_conf_7.png" /></p>
+<ol class="arabic simple">
+<li>Go to <strong>Inventory &gt; Configuration &gt; Package Types</strong></li>
+<li>Select a record or create a new one</li>
+<li>Configure the box dimensions, and min/max weight</li>
+<li>Specify the carrier (optional)</li>
+</ol>
+<p><img alt="image8" src="https://raw.githubusercontent.com/xxp-odoo-erp/xxp-delivery/16.0/cdek_delivery/static/img/cdek_conf_8.png" /></p>
+</div>
+</div>
+<div class="section" id="usage">
+<h2><a class="toc-backref" href="#toc-entry-15">Usage</a></h2>
+<div class="section" id="sale-flow-with-cdek-delivery">
+<h3><a class="toc-backref" href="#toc-entry-16">Sale Flow with CDEK delivery</a></h3>
+<blockquote>
+<strong>Important:</strong> Make sure you have configured the partner for CDEK
+delivery.</blockquote>
+</div>
+</div>
+</div>
+<div class="section" id="create-sale-order">
+<h1>Create Sale Order</h1>
+<ul class="simple">
+<li>Go to the Sales app</li>
+<li>Click the “+New” button to create a quotation</li>
+<li>Select a partner in the “Customer” field</li>
+<li>Add a product to sell</li>
+<li>Click the “Add Shipping” button</li>
+</ul>
+<p><img alt="Sale Order" src="https://raw.githubusercontent.com/xxp-odoo-erp/xxp-delivery/16.0/cdek_delivery/static/img/cdek_usage_1.png" /></p>
+</div>
+<div class="section" id="get-shipping-rate">
+<h1>Get Shipping Rate</h1>
+<ul class="simple">
+<li>On the Add a shipping method wizard:<ul>
+<li>Select CDEK Delivery in the “Shipping method” field</li>
+<li>Select a package type</li>
+<li>Add a CDEK Additional Delivery service and the required service
+value<ul>
+<li>For packages — quantity (integer &gt; 0)</li>
+<li>For insurance — insurance value (positive number)</li>
+<li>For SMS — phone number in format +7XXXXXXXXXX</li>
+<li>For packaging materials — length in meters</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Click the “Get Rate” button</li>
+<li>The service cost will be set automatically</li>
+<li>Press the “Add” button to add the CDEK Delivery product to the sale
+order</li>
+</ul>
+<p><img alt="Shipping Rate" src="https://raw.githubusercontent.com/xxp-odoo-erp/xxp-delivery/16.0/cdek_delivery/static/img/cdek_usage_2.png" /></p>
+<p><strong>Delivery Cost Calculation</strong></p>
+<p>When calculating delivery cost, the following are taken into account:</p>
+<ul class="simple">
+<li>Selected CDEK tariff</li>
+<li>Package dimensions and weight</li>
+<li>Selected additional CDEK services</li>
+<li>Delivery type (door/office/terminal/postbox)</li>
+<li>Once the sale order is confirmed, Odoo will create a delivery
+operation</li>
+</ul>
+<p><img alt="Sale Order Done" src="https://raw.githubusercontent.com/xxp-odoo-erp/xxp-delivery/16.0/cdek_delivery/static/img/cdek_usage_3.png" /></p>
+</div>
+<div class="section" id="register-the-package">
+<h1>Register the package</h1>
+<ul class="simple">
+<li>Go to the created picking operation</li>
+<li>Validate the picking</li>
+<li>Odoo will register the package with the CDEK carrier</li>
+<li>Go to the “Additional Info” tab</li>
+<li>Check the CDEK Order UUID and tracking reference</li>
+</ul>
+<p><img alt="Picking Validated" src="https://raw.githubusercontent.com/xxp-odoo-erp/xxp-delivery/16.0/cdek_delivery/static/img/cdek_usage_4.png" /></p>
+</div>
+<div class="section" id="to-cancel-the-order">
+<h1>To Cancel the Order</h1>
+<ul class="simple">
+<li>Go to <strong>Inventory &gt; Your Delivery Operations</strong></li>
+<li>Open a picking to cancel the CDEK Delivery</li>
+<li>Go to the “Additional Info” tab</li>
+<li>Press the “Cancel” button</li>
+</ul>
+<div class="section" id="bug-tracker">
+<h2>Bug Tracker</h2>
+<p>Bugs are tracked on <a class="reference external" href="https://github.com/xxp-odoo-erp/xxp-delivery/issues">GitHub Issues</a>.
+In case of trouble, please check there if your issue has already been reported.
+If you spotted it first, help us to smash it by providing a detailed and welcomed
+<a class="reference external" href="https://github.com/xxp-odoo-erp/xxp-delivery/issues/new?body=module:%20cdek_delivery%0Aversion:%2016.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**">feedback</a>.</p>
+<p>Do not contact contributors directly about support or help with technical issues.</p>
+</div>
+<div class="section" id="credits">
+<h2>Credits</h2>
+<div class="section" id="authors">
+<h3>Authors</h3>
+<ul class="simple">
+<li>XXP</li>
+<li>Maxim Shurupov</li>
+</ul>
+</div>
+<div class="section" id="maintainers">
+<h3>Maintainers</h3>
+<p>This module is part of the <a class="reference external" href="https://github.com/xxp-odoo-erp/xxp-delivery/tree/16.0/cdek_delivery">xxp-odoo-erp/xxp-delivery</a> project on GitHub.</p>
+<p>You are welcome to contribute.</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

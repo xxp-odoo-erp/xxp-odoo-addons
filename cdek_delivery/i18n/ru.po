@@ -1,0 +1,2264 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* cdek_delivery
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-31 09:39+0000\n"
+"PO-Revision-Date: 2026-06-07 12:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/models/sale_order_cdek_service.py:0
+#, python-format
+msgid "%(product)s: %(error)s"
+msgstr "%(product)s: %(error)s"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/wizard/search_cdek_office.py:0
+#, python-format
+msgid "%(type)s %(code)s has been selected"
+msgstr "Выбран %(type)s %(code)s"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__adult_goods
+msgid "18+"
+msgstr "18+"
+
+#. module: cdek_delivery
+#: model_terms:ir.ui.view,arch_db:cdek_delivery.delivery_carrier_form
+msgid ""
+"<span class=\"fa fa-info-circle\"/>\n"
+"                            <span>\n"
+"                                If you are not using a production "
+"environment, a test client ID and client secret are used.\n"
+"                            </span>"
+msgstr ""
+"<span class=\"fa fa-info-circle\"/>\n"
+"                            <span>\n"
+"                                Если вы не используете production-окружение, используются тестовые client ID и client secret.\n"
+"                            </span>"
+
+#. module: cdek_delivery
+#: model_terms:ir.ui.view,arch_db:cdek_delivery.sale_order_cdek_service_kanban_view
+msgid "<span>Insurance value: </span>"
+msgstr "<span>Страховая сумма: </span>"
+
+#. module: cdek_delivery
+#: model_terms:ir.ui.view,arch_db:cdek_delivery.sale_order_cdek_service_kanban_view
+msgid "<span>Length of packaging material: </span>"
+msgstr "<span>Длина упаковочного материала: </span>"
+
+#. module: cdek_delivery
+#: model_terms:ir.ui.view,arch_db:cdek_delivery.sale_order_cdek_service_kanban_view
+msgid "<span>Phone number: </span>"
+msgstr "<span>Номер телефона: </span>"
+
+#. module: cdek_delivery
+#: model_terms:ir.ui.view,arch_db:cdek_delivery.sale_order_cdek_service_kanban_view
+msgid "<span>Quantity of packages: </span>"
+msgstr "<span>Количество упаковок: </span>"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__envelope_a4_cdek_free
+msgid "A4 Cardboard Envelope (Free)"
+msgstr "Картонный конверт A4 (бесплатно)"
+
+#. module: cdek_delivery
+#: model_terms:ir.ui.view,arch_db:cdek_delivery.choose_delivery_carrier_view_form
+msgid "Additional delivery services"
+msgstr "Дополнительные услуги доставки"
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_deliv_receiver_product_template
+msgid ""
+"Additional service for cargo delivery in the recipient's city, provided that "
+"the delivery tariff has \"to warehouse\" mode (only for \"LTL\" tariff). Not "
+"applicable to postamat orders."
+msgstr ""
+"Дополнительная услуга доставки груза в городе получателя при условии, что тариф доставки имеет режим «до склада» (только для тарифа «LTL»). Не применяется к заказам в постамат."
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_take_sender_product_template
+msgid ""
+"Additional service for picking up cargo from the client to the CDEK office "
+"within the city as part of \"LTL (consolidated cargo)\" transportation. "
+"Additional pickup service in the sender's city, provided that the delivery "
+"tariff has \"from warehouse\" mode (not available for Parcel tariffs)."
+msgstr ""
+"Дополнительная услуга забора груза у клиента и доставки в офис СДЭК в пределах города в рамках перевозки «LTL (сборный груз)». Дополнительная услуга забора в городе отправителя при условии, что тариф доставки имеет режим «со склада» (недоступно для тарифов Parcel)."
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_search_cdek_office_line__address
+#: model_terms:ir.ui.view,arch_db:cdek_delivery.search_cdek_office_line_view_form
+msgid "Address"
+msgstr "Адрес"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/wizard/search_cdek_office.py:0
+#, python-format
+msgid "All Types"
+msgstr "Все типы"
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_ban_attachment_inspection_product_template
+msgid ""
+"Allows prohibition of contents inspection. Provided for e-commerce. Not "
+"compatible with additional services \"Trying on at home\" and \"Partial "
+"delivery\". Service is not provided to postamat. Only for clients with E-"
+"commerce type contract. Cost — 0 rubles."
+msgstr ""
+"Позволяет запретить осмотр вложений. Предоставляется для электронной коммерции. Несовместима с дополнительными услугами «Примерка на дому» и «Частичная доставка». Услуга не предоставляется для постамата. Только для клиентов с договором типа E-commerce. Стоимость — 0 рублей."
+
+#. module: cdek_delivery
+#: model_terms:ir.ui.view,arch_db:cdek_delivery.delivery_carrier_form
+msgid "Available Tariffs"
+msgstr "Доступные тарифы"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__ban_attachment_inspection
+msgid "Ban Attachment Inspection"
+msgstr "Запрет на вскрытие вложений"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__delivery_carrier__cdek_print_type__barcode
+msgid "Barcode"
+msgstr "Штрихкод"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__carton_box_10kg
+msgid "Box (10 kg 40x35x28 cm)"
+msgstr "Коробка (10 кг 40×35×28 см)"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__carton_box_l_12_kilos
+msgid "Box (12 kg 31x25x38 cm)"
+msgstr "Коробка (12 кг 31×25×38 см)"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__carton_box_xl_18_kilos
+msgid "Box (18 kg 60x35x30 cm)"
+msgstr "Коробка (18 кг 60×35×30 см)"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__carton_box_2kg
+msgid "Box (2 kg 34x24x10 cm)"
+msgstr "Коробка (2 кг 34×24×10 см)"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__carton_box_20kg
+msgid "Box (20 kg 47x40x43 cm)"
+msgstr "Коробка (20 кг 47×40×43 см)"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__carton_box_3kg
+msgid "Box (3 kg 24x24x21 cm)"
+msgstr "Коробка (3 кг 24×24×21 см)"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__carton_box_30kg
+msgid "Box (30 kg 69x39x42 cm)"
+msgstr "Коробка (30 кг 69×39×42 см)"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__carton_box_5kg
+msgid "Box (5 kg 40x24x21 cm)"
+msgstr "Коробка (5 кг 40×24×21 см)"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__carton_box_m
+msgid "Box M (5 kg 33x25x15 cm)"
+msgstr "Коробка M (5 кг 33×25×15 см)"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__carton_box_s_2_kilos
+msgid "Box S (2 kg 23x19x10 cm)"
+msgstr "Коробка S (2 кг 23×19×10 см)"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__carton_box_xs
+msgid "Box XS (0.5 kg 17x12x9 cm)"
+msgstr "Коробка XS (0,5 кг 17×12×9 см)"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__bubble_wrap
+msgid "Bubble Wrap"
+msgstr "Пузырчатая плёнка"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,help:cdek_delivery.field_search_cdek_office__point_type
+msgid "By default All types"
+msgstr "По умолчанию все типы"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__delivery_carrier__delivery_type__cdek
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__stock_package_type__package_carrier_type__cdek
+#: model:ir.ui.menu,name:cdek_delivery.menu_cdek_delivery
+#: model_terms:ir.ui.view,arch_db:cdek_delivery.res_partner_form_view
+msgid "CDEK"
+msgstr "СДЭК"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/models/product_template.py:0
+#, python-format
+msgid "CDEK - %s"
+msgstr "СДЭК - %s"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,help:cdek_delivery.field_res_partner__cdek_city_code
+#: model:ir.model.fields,help:cdek_delivery.field_res_users__cdek_city_code
+msgid "CDEK City Code from CDEK API"
+msgstr "Код города СДЭК из API СДЭК"
+
+#. module: cdek_delivery
+#: model_terms:ir.ui.view,arch_db:cdek_delivery.delivery_carrier_form
+msgid "CDEK Configuration"
+msgstr "Конфигурация СДЭК"
+
+#. module: cdek_delivery
+#: model:delivery.carrier,name:cdek_delivery.cdek_delivery_carrier
+#: model:product.template,name:cdek_delivery.product_product_delivery_cdek_product_template
+msgid "CDEK Delivery"
+msgstr "Доставка СДЭК"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/models/delivery_carrier.py:0
+#, python-format
+msgid ""
+"CDEK Error: \n"
+"%s"
+msgstr ""
+"Ошибка СДЭК: \n"
+"%s"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,help:cdek_delivery.field_res_partner__cdek_office_code
+#: model:ir.model.fields,help:cdek_delivery.field_res_users__cdek_office_code
+msgid "CDEK Office Code from CDEK API"
+msgstr "Код пункта выдачи СДЭК из API СДЭК"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_product_product__cdek_reference_type
+#: model:ir.model.fields,field_description:cdek_delivery.field_sale_order_cdek_service__product_cdek_reference_type
+msgid "CDEK Reference Type"
+msgstr "Тип ссылки СДЭК"
+
+#. module: cdek_delivery
+#: model:ir.model,name:cdek_delivery.model_search_cdek_office
+msgid "CDEK Search Office"
+msgstr "Поиск пункта выдачи СДЭК"
+
+#. module: cdek_delivery
+#: model_terms:ir.ui.view,arch_db:cdek_delivery.sale_order_form_view
+msgid "CDEK Services"
+msgstr "Услуги СДЭК"
+
+#. module: cdek_delivery
+#: model:ir.model,name:cdek_delivery.model_cdek_tariff
+msgid "CDEK Tariff"
+msgstr "Тариф СДЭК"
+
+#. module: cdek_delivery
+#: model:ir.model,name:cdek_delivery.model_cdek_tariff_mode
+msgid "CDEK Tariff Mode"
+msgstr "Режим тарифа СДЭК"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_res_partner__cdek_tariff_mode_domain
+#: model:ir.model.fields,field_description:cdek_delivery.field_res_users__cdek_tariff_mode_domain
+msgid "CDEK Tariff Mode Domain"
+msgstr "Домен режима тарифа СДЭК"
+
+#. module: cdek_delivery
+#: model:ir.actions.act_window,name:cdek_delivery.action_open_cdek_tariffs
+#: model_terms:ir.ui.view,arch_db:cdek_delivery.delivery_carrier_form
+msgid "CDEK Tariffs"
+msgstr "Тарифы СДЭК"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/models/delivery_carrier.py:0
+msgid "CDEK delivery carrier is not specified"
+msgstr "Служба доставки СДЭК не указана"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/models/delivery_carrier.py:0
+#, python-format
+msgid "CDEK delivery not found"
+msgstr "Служба доставки СДЭК не найдена"
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_sms_product_template
+msgid ""
+"CDEK offers each client to arrange the \"SMS notification of delivery\" "
+"service.\n"
+"The sender receives a message with the date and time of delivery. The cost "
+"of the service is 10 rubles.\n"
+"The sender receives an SMS with information about the date/time of delivery "
+"and the recipient's full name. For warehouse delivery mode and when "
+"specifying the recipient's mobile phone, CDEK provides all clients with a "
+"free service: \"SMS notification of cargo arrival at the warehouse\" or "
+"notifications as PUSH messages in the CDEK mobile app or in messengers. The "
+"recipient will receive a message with information about the pickup address "
+"and office hours."
+msgstr ""
+"СДЭК предлагает каждому клиенту подключить услугу «СМС-уведомление о доставке».\n"
+"Отправитель получает сообщение с датой и временем доставки. Стоимость услуги — 10 рублей.\n"
+"Отправитель получает СМС с информацией о дате/времени доставки и полном имени получателя. При режиме доставки «до склада» и указании мобильного телефона получателя СДЭК предоставляет всем клиентам бесплатную услугу: «СМС-уведомление о прибытии груза на склад» или уведомления в виде PUSH-сообщений в мобильном приложении СДЭК или в мессенджерах. Получатель получит сообщение с информацией об адресе выдачи и часах работы."
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/models/res_partner.py:0
+#, python-format
+msgid "CDEK phone is required for partner %s"
+msgstr "Для контрагента %s требуется телефон СДЭК"
+
+#. module: cdek_delivery
+#: model:ir.model.constraint,message:cdek_delivery.constraint_product_product_cdek_reference_uniq
+msgid "CDEK reference must be unique"
+msgstr "Ссылка на СДЭК должна быть уникальной"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/models/product_product.py:0
+#, python-format
+msgid "CDEK service can only be used for service products"
+msgstr "Услугу СДЭК можно использовать только для сервисных товаров"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/models/product_product.py:0
+#, python-format
+msgid "CDEK service cannot be used for saleable products"
+msgstr "Услугу СДЭК нельзя использовать для товаров, разрешённых к продаже"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/models/delivery_carrier.py:0
+#, python-format
+msgid "CDEK tariffs have been synchronized!"
+msgstr "Тарифы СДЭК синхронизированы!"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_adult_goods_product_template
+msgid "CDEK: 18+"
+msgstr "CDEK: 18+"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_ban_attachment_inspection_product_template
+msgid "CDEK: Ban on Inspection of Contents"
+msgstr "CDEK: Запрет осмотра вложения"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_carton_box_10kg_product_template
+msgid "CDEK: Box (10 kg 40×35×28 cm)"
+msgstr "CDEK: Коробка (10 кг 40х35х28 см)"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_carton_box_l_12_kilos_product_template
+msgid "CDEK: Box (12 kg 31×25×38 cm)"
+msgstr "CDEK: Коробка (12 кг 31х25х38 см)"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_carton_box_xl_18_kilos_product_template
+msgid "CDEK: Box (18 kg 60×35×30 cm)"
+msgstr "CDEK: Коробка (18 кг 60х35х30 см)"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_carton_box_2kg_product_template
+msgid "CDEK: Box (2 kg 34×24×10 cm)"
+msgstr "CDEK: Коробка (2 кг 34х24х10 см)"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_carton_box_20kg_product_template
+msgid "CDEK: Box (20 kg 47×40×43 cm)"
+msgstr "CDEK: Коробка (20 кг 47х40х43 см)"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_carton_box_3kg_product_template
+msgid "CDEK: Box (3 kg 24×24×21 cm)"
+msgstr "CDEK: Коробка (3 кг 24х24х21 см)"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_carton_box_30kg_product_template
+msgid "CDEK: Box (30 kg 69×39×42 cm)"
+msgstr "CDEK: Коробка (30 кг 69х39х42 см)"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_carton_box_5kg_product_template
+msgid "CDEK: Box (5 kg 40×24×21 cm)"
+msgstr "CDEK: Коробка (5 кг 40х24х21 см)"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_carton_box_m_product_template
+msgid "CDEK: Box M (5 kg 33×25×15 cm)"
+msgstr "CDEK: Коробка M (5 кг 33х25х15 см)"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_carton_box_s_2_kilos_product_template
+msgid "CDEK: Box S (2 kg 23×19×10 cm)"
+msgstr "CDEK: Коробка S (2 кг 23х19х10 см)"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_carton_box_xs_product_template
+msgid "CDEK: Box XS (0.5 kg 17×12×9 cm)"
+msgstr "CDEK: Коробка XS (0,5 кг 17х12х9 см)"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_bubble_wrap_product_template
+msgid "CDEK: Bubble Wrap"
+msgstr "CDEK: Воздушно-пузырчатая пленка"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_notify_order_created_product_template
+msgid "CDEK: CDEK Order Creation Notification"
+msgstr "CDEK: Уведомление о создании заказа в СДЭК"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_envelope_a4_cdek_free_product_template
+msgid "CDEK: Cardboard A4 Envelope (free)"
+msgstr "CDEK: Конверт А4 из картона (бесплатный)"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_package_a_2_light_express_product_template
+msgid "CDEK: Courier Package \"Light\" A2 (white)"
+msgstr "CDEK: Пакет курьерский «Лайт» А2 (белый)"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_package_a_3_light_express_product_template
+msgid "CDEK: Courier Package \"Light\" A3 (white)"
+msgstr "CDEK: Пакет курьерский «Лайт» А3 (белый)"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_package_a_4_light_express_product_template
+msgid "CDEK: Courier Package \"Light\" A4 (white)"
+msgstr "CDEK: Пакет курьерский «Лайт» А4 (белый)"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_package_a_5_light_express_product_template
+msgid "CDEK: Courier Package \"Light\" A5 (white)"
+msgstr "CDEK: Пакет курьерский «Лайт» А5 (белый)"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_courier_package_a2_product_template
+msgid "CDEK: Courier Package A2"
+msgstr "CDEK: Пакет курьерский А2"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_customs_clearance_product_template
+msgid "CDEK: Customs Clearance"
+msgstr "CDEK: Таможенное оформление"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_custom_clearence_for_b2b_1000_export_product_template
+msgid "CDEK: Customs Clearance B2B 1000+ Export"
+msgstr "CDEK: Таможенное оформление B2B 1000+ экспорт"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_custom_clearence_for_b2b_200_import_product_template
+msgid "CDEK: Customs Clearance B2B 200+ Import"
+msgstr "CDEK: Таможенное оформление B2B 200+ импорт"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_customs_clearance_for_the_last_mile_product_template
+msgid "CDEK: Customs Clearance for Last Mile"
+msgstr "CDEK: ТО для последней мили"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_custom_clearence_for_last_mile_b2b_200469_product_template
+msgid "CDEK: Customs Clearance for Last Mile B2B 200+"
+msgstr "CDEK: ТО для последней мили B2B 200+"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_custom_clearence_for_last_mile_b2b_200_product_template
+msgid "CDEK: Customs Clearance for Last Mile B2B 200-"
+msgstr "CDEK: ТО для последней мили B2B 200-"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_danger_cargo_product_template
+msgid "CDEK: Dangerous Cargo"
+msgstr "CDEK: ОПАСНЫЙ ГРУЗ"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_deliv_receiver_product_template
+msgid "CDEK: Delivery in Recipient's City"
+msgstr "CDEK: ДОСТАВКА В ГОРОДЕ ПОЛУЧАТЕЛЯ"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_exp_regist_product_template
+msgid "CDEK: Export Customs Clearance"
+msgstr "CDEK: Экспортное таможенное оформление"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_exp_regist_with_doc_product_template
+msgid "CDEK: Export Customs Clearance (with documents)"
+msgstr "CDEK: Экспортное таможенное оформление (с документами)"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_exp_regist_without_doc_product_template
+msgid "CDEK: Export Customs Clearance (without documents)"
+msgstr "CDEK: Экспортное таможенное оформление (без документов)"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_get_up_floor_by_elevator_product_template
+msgid "CDEK: Floor Ascent (by elevator)"
+msgstr "CDEK: Подъём на этаж (на лифте)"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_get_up_floor_by_hand_product_template
+msgid "CDEK: Floor Ascent (by stairs)"
+msgstr "CDEK: Подъём на этаж (по лестнице)"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_xl_box_inner_crate_product_template
+msgid "CDEK: Inner Crate \"Box XL\""
+msgstr "CDEK: Внутренняя обрешётка \"Коробка XL\""
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_20_kg_box_inner_crate_product_template
+msgid "CDEK: Inner Crate \"Box up to 20 kg\""
+msgstr "CDEK: Внутренняя обрешётка \"Коробка Вес до 20кг\""
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_30_kg_box_inner_crate_product_template
+msgid "CDEK: Inner Crate \"Box up to 30 kg\""
+msgstr "CDEK: Внутренняя обрешётка \"Коробка Вес до 30кг\""
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_insurance_product_template
+msgid "CDEK: Insurance"
+msgstr "CDEK: СТРАХОВАНИЕ"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_load_the_operation_at_the_recipient_product_template
+msgid "CDEK: Loading Operations at Recipient"
+msgstr "CDEK: Погрузо-разгрузочные работы у получателя"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_loading_operations_at_the_sender_product_template
+msgid "CDEK: Loading Operations at Sender"
+msgstr "CDEK: Погрузо-разгрузочные работы у отправителя"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_notify_order_delivery_product_template
+msgid "CDEK: Order Accepted for Delivery Notification"
+msgstr "CDEK: Уведомление о приеме заказа на доставку"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_sms_product_template
+msgid "CDEK: Order Delivery Notification"
+msgstr "CDEK: Уведомление о вручении заказа"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_another_product_template
+msgid "CDEK: Other"
+msgstr "CDEK: Прочее"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_part_deliv_product_template
+msgid "CDEK: Partial Delivery"
+msgstr "CDEK: ЧАСТИЧНАЯ ДОСТАВКА"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_photo_of_documents_product_template
+msgid "CDEK: Photo of Documents"
+msgstr "CDEK: Фото документов"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_take_sender_product_template
+msgid "CDEK: Pickup in Sender's City"
+msgstr "CDEK: ЗАБОР В ГОРОДЕ ОТПРАВИТЕЛЯ"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_carton_filler_product_template
+msgid "CDEK: Pressed Cardboard \"Filler\" (55×14×2.3 cm)"
+msgstr "CDEK: Прессованный картон \"филлер\" (55х14х2,3 см)"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_sms_notifications_for_the_recipient_product_template
+msgid "CDEK: SMS Notification of Order Arrival"
+msgstr "CDEK: СМС-уведомление о прибытии заказа"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_sms_notifications_for_expiration_date_product_template
+msgid "CDEK: SMS Notification of Storage Period Expiration"
+msgstr "CDEK: СМС-уведомление об окончании срока хранения"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_self_clearing_customs_for_b2b_export_product_template
+msgid "CDEK: Self-Customs Clearance B2B Export"
+msgstr "CDEK: Самостоятельное таможенное оформление B2B экспорт"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_self_clearing_customs_for_b2b_import_product_template
+msgid "CDEK: Self-Customs Clearance B2B Import"
+msgstr "CDEK: Самостоятельное таможенное оформление B2B импорт"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/models/delivery_carrier.py:0
+msgid "CDEK: Tariff is not set for partner %s"
+msgstr "СДЭК: тариф не указан для контрагента %s"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_thermal_mode_product_template
+msgid "CDEK: Thermal Mode"
+msgstr "CDEK: Тепловой режим"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_trying_on_product_template
+msgid "CDEK: Trying On"
+msgstr "CDEK: ПРИМЕРКА"
+
+#. module: cdek_delivery
+#: model:product.template,name:cdek_delivery.product_product_cdek_waste_paper_product_template
+msgid "CDEK: Waste Paper"
+msgstr "CDEK: Макулатурная бумага"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_stock_package_type__package_carrier_type
+msgid "Carrier"
+msgstr "Перевозчик"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_choose_delivery_carrier__carrier_delivery_type
+msgid "Carrier Delivery Type"
+msgstr "Тип доставки перевозчика"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_delivery_carrier__cdek_available_tariff_ids
+msgid "Cdek Available Tariff"
+msgstr "Доступные тарифы СДЭК"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_delivery_carrier__cdek_client_id
+msgid "Cdek Client"
+msgstr "Идентификатор клиента СДЭК"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_delivery_carrier__cdek_client_secret
+msgid "Cdek Client Secret"
+msgstr "Секретный ключ клиента СДЭК"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_res_partner__cdek_contragent_type
+#: model:ir.model.fields,field_description:cdek_delivery.field_res_users__cdek_contragent_type
+msgid "Cdek Contragent Type"
+msgstr "Тип контрагента СДЭК"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_delivery_carrier__cdek_delivery_lead_time
+msgid "Cdek Delivery Lead Time"
+msgstr "Время доставки СДЭК"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_stock_picking__cdek_order_uuid
+msgid "Cdek Order Uuid"
+msgstr "UUID заказа СДЭК"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_sale_order__cdek_package_type_id
+msgid "Cdek Package Type"
+msgstr "Тип упаковки СДЭК"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_delivery_carrier__cdek_print_type
+msgid "Cdek Print Type"
+msgstr "Тип печати СДЭК"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_product_product__cdek_reference
+#: model:ir.model.fields,field_description:cdek_delivery.field_product_template__cdek_reference
+msgid "Cdek Reference"
+msgstr "Ссылка на СДЭК"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_sale_order__cdek_service_ids
+msgid "Cdek Service"
+msgstr "Услуга СДЭК"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_res_partner__cdek_tariff_mode_id
+#: model:ir.model.fields,field_description:cdek_delivery.field_res_users__cdek_tariff_mode_id
+#: model:ir.model.fields,field_description:cdek_delivery.field_sale_order__cdek_tariff_mode_id
+msgid "Cdek Tariff Mode"
+msgstr "Режим тарифа СДЭК"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_delivery_carrier__cdek_type
+msgid "Cdek Type"
+msgstr "Тип СДЭК"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_search_cdek_office__city
+msgid "City"
+msgstr "Город"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_res_partner__cdek_city_code
+#: model:ir.model.fields,field_description:cdek_delivery.field_res_users__cdek_city_code
+#: model_terms:ir.ui.view,arch_db:cdek_delivery.res_partner_form_view
+msgid "City Code"
+msgstr "Код города"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/tools/cdek_request.py:0
+#, python-format
+msgid "City and country code are required"
+msgstr "Требуются город и код страны"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/tools/cdek_request.py:0
+#, python-format
+msgid "City with name %(city)s and country %(code)s not found"
+msgstr "Город с названием %(city)s в стране %(code)s не найден"
+
+#. module: cdek_delivery
+#: model_terms:ir.ui.view,arch_db:cdek_delivery.search_cdek_office_view_form
+msgid "Close"
+msgstr "Закрыть"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_cdek_tariff_mode__code
+#: model:ir.model.fields,field_description:cdek_delivery.field_search_cdek_office_line__code
+msgid "Code"
+msgstr "Код"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_sale_order_cdek_service__company_id
+msgid "Company"
+msgstr "Компания"
+
+#. module: cdek_delivery
+#: model:ir.model,name:cdek_delivery.model_res_partner
+msgid "Contact"
+msgstr "Контакт"
+
+#. module: cdek_delivery
+#: model_terms:ir.ui.view,arch_db:cdek_delivery.res_partner_form_view
+msgid "Contragent Type"
+msgstr "Тип контрагента"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,help:cdek_delivery.field_res_partner__cdek_contragent_type
+#: model:ir.model.fields,help:cdek_delivery.field_res_users__cdek_contragent_type
+msgid "Contragent type for CDEK delivery"
+msgstr "Тип контрагента для доставки СДЭК"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_choose_delivery_carrier__display_price
+msgid "Cost"
+msgstr "Стоимость"
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_courier_package_a2_product_template
+msgid "Cost — 70 rub."
+msgstr "Стоимость — 70 руб."
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_product__cdek_reference_type__counter
+msgid "Counter"
+msgstr "Счётчик"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_sale_order_cdek_service__counter_value
+msgid "Counter Value"
+msgstr "Значение счётчика"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/const.py:0
+#, python-format
+msgid "Counter value must be greater than 0"
+msgstr "Значение счётчика должно быть больше 0"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_search_cdek_office__country_id
+msgid "Country"
+msgstr "Страна"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/tools/cdek_request.py:0
+#, python-format
+msgid "Country code, city and street are required for door delivery"
+msgstr "Для доставки до двери требуются код страны, город и улица"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__courier_package_a2
+msgid "Courier Package A2"
+msgstr "Курьерская папка A2"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__package_a_2_light_express
+msgid "Courier Package Light A2 (White)"
+msgstr "Курьерская папка-пакет Лайт A2 (белая)"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__package_a_3_light_express
+msgid "Courier Package Light A3 (White)"
+msgstr "Курьерская папка-пакет Лайт A3 (белая)"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__package_a_4_light_express
+msgid "Courier Package Light A4 (White)"
+msgstr "Курьерская папка-пакет Лайт A4 (белая)"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__package_a_5_light_express
+msgid "Courier Package Light A5 (White)"
+msgstr "Курьерская папка-пакет Лайт A5 (белая)"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_cdek_tariff__create_uid
+#: model:ir.model.fields,field_description:cdek_delivery.field_cdek_tariff_mode__create_uid
+#: model:ir.model.fields,field_description:cdek_delivery.field_sale_order_cdek_service__create_uid
+#: model:ir.model.fields,field_description:cdek_delivery.field_search_cdek_office__create_uid
+#: model:ir.model.fields,field_description:cdek_delivery.field_search_cdek_office_line__create_uid
+msgid "Created by"
+msgstr "Кем создано"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_cdek_tariff__create_date
+#: model:ir.model.fields,field_description:cdek_delivery.field_cdek_tariff_mode__create_date
+#: model:ir.model.fields,field_description:cdek_delivery.field_sale_order_cdek_service__create_date
+#: model:ir.model.fields,field_description:cdek_delivery.field_search_cdek_office__create_date
+#: model:ir.model.fields,field_description:cdek_delivery.field_search_cdek_office_line__create_date
+msgid "Created on"
+msgstr "Дата создания"
+
+#. module: cdek_delivery
+#: model_terms:ir.ui.view,arch_db:cdek_delivery.delivery_carrier_form
+msgid "Credentials"
+msgstr "Учётные данные"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_sale_order_cdek_service__company_currency_id
+msgid "Currency"
+msgstr "Валюта"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__customs_clearance
+msgid "Customs Clearance"
+msgstr "Таможенное оформление"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__custom_clearence_for_b2b_1000_export
+msgid "Customs Clearance B2B 1000+ Export"
+msgstr "Таможенная очистка B2B 1000+ экспорт"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__custom_clearence_for_b2b_200_import
+msgid "Customs Clearance B2B 200+ Import"
+msgstr "Таможенная очистка B2B 200+ импорт"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__customs_clearance_for_the_last_mile
+msgid "Customs Clearance for Last Mile"
+msgstr "Таможенная очистка последней мили"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__custom_clearence_for_last_mile_b2b_200469
+msgid "Customs Clearance for Last Mile B2B 200+"
+msgstr "Таможенная очистка последней мили B2B 200+"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__custom_clearence_for_last_mile_b2b_200
+msgid "Customs Clearance for Last Mile B2B 200-"
+msgstr "Таможенная очистка последней мили B2B 200-"
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_custom_clearence_for_b2b_1000_export_product_template
+msgid "Customs clearance B2B 1000+ export"
+msgstr "Таможенное оформление B2B 1000+ экспорт"
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_custom_clearence_for_b2b_200_import_product_template
+msgid "Customs clearance B2B 200+ import"
+msgstr "Таможенное оформление B2B 200+ импорт"
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_customs_clearance_product_template
+msgid ""
+"Customs clearance as part of the B2B international cargo delivery service. "
+"Charged automatically when creating international orders with \"Business "
+"Standard\"/\"Business Express\" tariffs."
+msgstr ""
+"Таможенное оформление в рамках услуги международной доставки грузов B2B. Начисляется автоматически при создании международных заказов с тарифами «Business Standard»/«Business Express»."
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_customs_clearance_for_the_last_mile_product_template
+msgid "Customs clearance for last mile"
+msgstr "Таможенное оформление для последней мили"
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_custom_clearence_for_last_mile_b2b_200469_product_template
+msgid "Customs clearance for last mile B2B 200+"
+msgstr "Таможенное оформление для последней мили B2B 200+"
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_custom_clearence_for_last_mile_b2b_200_product_template
+msgid "Customs clearance for last mile B2B 200-"
+msgstr "Таможенное оформление для последней мили B2B 200-"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__danger_cargo
+msgid "Dangerous Cargo"
+msgstr "Опасный груз"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_delivery_carrier__cdek_default_delivery_type
+msgid "Default Delivery Type"
+msgstr "Тип доставки по умолчанию"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_delivery_carrier__default_height
+msgid "Default Height"
+msgstr "Высота по умолчанию"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_delivery_carrier__default_length
+msgid "Default Length"
+msgstr "Длина по умолчанию"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_delivery_carrier__default_width
+msgid "Default Width"
+msgstr "Ширина по умолчанию"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,help:cdek_delivery.field_delivery_carrier__cdek_default_delivery_type
+msgid "Default delivery type for CDEK delivery"
+msgstr "Тип доставки по умолчанию для СДЭК"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__delivery_carrier__cdek_type__2
+msgid "Delivery"
+msgstr "Доставка"
+
+#. module: cdek_delivery
+#: model:ir.model,name:cdek_delivery.model_choose_delivery_carrier
+msgid "Delivery Carrier Selection Wizard"
+msgstr "Мастер выбора службы доставки"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_cdek_tariff_mode__delivery_from
+msgid "Delivery From"
+msgstr "Откуда доставлять"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_cdek_tariff_mode__delivery_to
+msgid "Delivery To"
+msgstr "Куда доставлять"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_choose_delivery_carrier__cdek_delivery_type
+#: model:ir.model.fields,field_description:cdek_delivery.field_res_partner__cdek_delivery_type
+#: model:ir.model.fields,field_description:cdek_delivery.field_res_users__cdek_delivery_type
+#: model_terms:ir.ui.view,arch_db:cdek_delivery.res_partner_form_view
+msgid "Delivery Type"
+msgstr "Тип доставки"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/models/delivery_carrier.py:0
+#, python-format
+msgid "Delivery address not specified!"
+msgstr "Адрес доставки не указан!"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__deliv_receiver
+msgid "Delivery in Receiver City"
+msgstr "Доставка в городе получателя"
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_photo_of_documents_product_template
+msgid ""
+"Designed for product deliveries (cargo, documents) with recipient "
+"identification, photographing of client's goods/signed documents"
+msgstr ""
+"Предназначена для доставки товаров (грузов, документов) с идентификацией получателя, фотографированием товаров клиента/подписанных документов"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_cdek_tariff_mode__dimensions
+#: model:ir.model.fields,field_description:cdek_delivery.field_stock_package_type__dimensions
+#: model_terms:ir.ui.view,arch_db:cdek_delivery.delivery_carrier_form
+msgid "Dimensions"
+msgstr "Размеры"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_cdek_tariff__display_name
+#: model:ir.model.fields,field_description:cdek_delivery.field_cdek_tariff_mode__display_name
+#: model:ir.model.fields,field_description:cdek_delivery.field_sale_order_cdek_service__display_name
+#: model:ir.model.fields,field_description:cdek_delivery.field_search_cdek_office__display_name
+#: model:ir.model.fields,field_description:cdek_delivery.field_search_cdek_office_line__display_name
+msgid "Display Name"
+msgstr "Отображаемое имя"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__cdek_tariff_mode__delivery_from__door
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__cdek_tariff_mode__delivery_to__door
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__delivery_carrier__cdek_default_delivery_type__door
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__res_partner__cdek_delivery_type__door
+msgid "Door"
+msgstr "Дверь"
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_part_deliv_product_template
+msgid ""
+"During product delivery, the buyer can refuse one or more items and purchase "
+"only part of the order. If the order contains one item, the service is not "
+"connected (inspection cannot be added without a Photo). Not applicable to "
+"postamat orders and available only for E-commerce."
+msgstr ""
+"При доставке товаров покупатель может отказаться от одной или нескольких позиций и приобрести только часть заказа. Если в заказе одна позиция, услуга не подключается (осмотр нельзя добавить без услуги «Фото»). Не применяется к заказам в постамат и доступна только для E-commerce."
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__delivery_carrier__cdek_type__1
+msgid "E-Commerce"
+msgstr "E-Commerce"
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_get_up_floor_by_elevator_product_template
+msgid ""
+"Elevator ascent to floor, without additional parameter. The service is "
+"provided when it is necessary to carry oversized and heavy shipments "
+"(weighing from 10 kg) to a floor. (limit 150 kg)"
+msgstr ""
+"Подъём на этаж на лифте, без дополнительного параметра. Услуга предоставляется, когда необходимо поднять крупногабаритные и тяжёлые отправления (весом от 10 кг) на этаж. (лимит 150 кг)"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/wizard/search_cdek_office.py:0
+#, python-format
+msgid "Error"
+msgstr "Ошибка"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/tools/cdek_request.py:0
+#, python-format
+msgid "Error canceling order: %s"
+msgstr "Ошибка отмены заказа: %s"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/tools/cdek_request.py:0
+#, python-format
+msgid "Error creating order: %s"
+msgstr "Ошибка создания заказа: %s"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/tools/cdek_request.py:0
+#, python-format
+msgid "Error deleting order: %s"
+msgstr "Ошибка удаления заказа: %s"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/tools/cdek_request.py:0
+#, python-format
+msgid "Error getting order id: %s"
+msgstr "Ошибка получения ID заказа: %s"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/tools/cdek_request.py:0
+#, python-format
+msgid "Error getting tariffs: %s"
+msgstr "Ошибка получения тарифов: %s"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__exp_regist
+msgid "Export Customs Clearance"
+msgstr "Экспортная таможенная очистка"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__exp_regist_with_doc
+msgid "Export Customs Clearance (with Documents)"
+msgstr "Экспортная таможенная очистка (с документами)"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__exp_regist_without_doc
+msgid "Export Customs Clearance (without Documents)"
+msgstr "Экспортная таможенная очистка (без документов)"
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_exp_regist_product_template
+msgid "Export customs clearance"
+msgstr "Экспортное таможенное оформление"
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_exp_regist_with_doc_product_template
+msgid "Export customs clearance (with document package)"
+msgstr "Экспортное таможенное оформление (с пакетом документов)"
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_exp_regist_without_doc_product_template
+msgid "Export customs clearance (without document package)"
+msgstr "Экспортное таможенное оформление (без пакета документов)"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__get_up_floor_by_elevator
+msgid "Floor Delivery by Elevator"
+msgstr "Подъём на лифте"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__get_up_floor_by_hand
+msgid "Floor Delivery by Stairs"
+msgstr "Подъём по лестнице"
+
+#. module: cdek_delivery
+#: model_terms:ir.ui.view,arch_db:cdek_delivery.sale_order_cdek_service_form_view
+msgid "For example, +79999999999"
+msgstr "Например, +79999999999"
+
+#. module: cdek_delivery
+#: model_terms:ir.ui.view,arch_db:cdek_delivery.sale_order_cdek_service_form_view
+msgid "For example, 1"
+msgstr "Например, 1"
+
+#. module: cdek_delivery
+#: model_terms:ir.ui.view,arch_db:cdek_delivery.sale_order_cdek_service_form_view
+msgid "For example, 1.00"
+msgstr "Например, 1.00"
+
+#. module: cdek_delivery
+#: model_terms:ir.ui.view,arch_db:cdek_delivery.sale_order_cdek_service_form_view
+msgid "For example, 1000.00"
+msgstr "Например, 1000.00"
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_envelope_a4_cdek_free_product_template
+msgid "Free cardboard A4 envelope"
+msgstr "Бесплатный конверт A4 из картона"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_cdek_tariff__height_max
+msgid "Height Max"
+msgstr "Макс. высота"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_cdek_tariff__height_min
+msgid "Height Min"
+msgstr "Мин. высота"
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_bubble_wrap_product_template
+msgid ""
+"High-pressure polyethylene, two-layer. Additional packaging material for "
+"packing shipments into transport packaging.\n"
+"Available for all warehouse tariffs."
+msgstr ""
+"Полиэтилен высокого давления, двухслойный. Дополнительный упаковочный материал для упаковки отправлений в транспортную тару.\n"
+"Доступен для всех складских тарифов."
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_cdek_tariff__id
+#: model:ir.model.fields,field_description:cdek_delivery.field_cdek_tariff_mode__id
+#: model:ir.model.fields,field_description:cdek_delivery.field_sale_order_cdek_service__id
+#: model:ir.model.fields,field_description:cdek_delivery.field_search_cdek_office__id
+#: model:ir.model.fields,field_description:cdek_delivery.field_search_cdek_office_line__id
+msgid "ID"
+msgstr "ID"
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_danger_cargo_product_template
+msgid ""
+"In addition to regular documents and cargo, CDEK is ready to deliver "
+"shipments containing dangerous goods (except those prohibited for "
+"transportation). Due to the certain risk, the cost of delivering goods in "
+"the dangerous category is 1.5 times higher."
+msgstr ""
+"Помимо обычных документов и грузов, СДЭК готов доставлять отправления, содержащие опасные грузы (кроме запрещённых к перевозке). В связи с определённым риском стоимость доставки товаров опасной категории в 1,5 раза выше."
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__res_partner__cdek_contragent_type__individual
+msgid "Individual"
+msgstr "Физическое лицо"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__xl_box_inner_crate
+msgid "Inner Crate Box XL"
+msgstr "Внутренняя ящичная коробка XL"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__20_kg_box_inner_crate
+msgid "Inner Crate Box up to 20 kg"
+msgstr "Внутренняя ящичная коробка до 20 кг"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__30_kg_box_inner_crate
+msgid "Inner Crate Box up to 30 kg"
+msgstr "Внутренняя ящичная коробка до 30 кг"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__insurance
+msgid "Insurance"
+msgstr "Страхование"
+
+#. module: cdek_delivery
+#: model_terms:ir.ui.view,arch_db:cdek_delivery.sale_order_cdek_service_form_view
+msgid "Insurance value"
+msgstr "Страховая сумма"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/tools/cdek_request.py:0
+#, python-format
+msgid "Invalid delivery type for partner %s"
+msgstr "Недопустимый тип доставки для контрагента %s"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/tools/cdek_request.py:0
+#, python-format
+msgid ""
+"Invalid tariff for partner %(partner)s\n"
+"Default delivery type: %(delivery_type)s\n"
+"Tariff delivery from: %(delivery_from)s"
+msgstr ""
+"Недопустимый тариф для контрагента %(partner)s\n"
+"Тип доставки по умолчанию: %(delivery_type)s\n"
+"Отправление по тарифу: %(delivery_from)s"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_cdek_tariff____last_update
+#: model:ir.model.fields,field_description:cdek_delivery.field_cdek_tariff_mode____last_update
+#: model:ir.model.fields,field_description:cdek_delivery.field_sale_order_cdek_service____last_update
+#: model:ir.model.fields,field_description:cdek_delivery.field_search_cdek_office____last_update
+#: model:ir.model.fields,field_description:cdek_delivery.field_search_cdek_office_line____last_update
+msgid "Last Modified on"
+msgstr "Последнее изменение"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_cdek_tariff__write_uid
+#: model:ir.model.fields,field_description:cdek_delivery.field_cdek_tariff_mode__write_uid
+#: model:ir.model.fields,field_description:cdek_delivery.field_sale_order_cdek_service__write_uid
+#: model:ir.model.fields,field_description:cdek_delivery.field_search_cdek_office__write_uid
+#: model:ir.model.fields,field_description:cdek_delivery.field_search_cdek_office_line__write_uid
+msgid "Last Updated by"
+msgstr "Кем обновлено"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_cdek_tariff__write_date
+#: model:ir.model.fields,field_description:cdek_delivery.field_cdek_tariff_mode__write_date
+#: model:ir.model.fields,field_description:cdek_delivery.field_sale_order_cdek_service__write_date
+#: model:ir.model.fields,field_description:cdek_delivery.field_search_cdek_office__write_date
+#: model:ir.model.fields,field_description:cdek_delivery.field_search_cdek_office_line__write_date
+msgid "Last Updated on"
+msgstr "Дата обновления"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__res_partner__cdek_contragent_type__legal_entity
+msgid "Legal Entity"
+msgstr "Юридическое лицо"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_product__cdek_reference_type__length
+msgid "Length"
+msgstr "Длина"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_cdek_tariff__length_max
+msgid "Length Max"
+msgstr "Макс. длина"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_cdek_tariff__length_min
+msgid "Length Min"
+msgstr "Мин. длина"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_sale_order_cdek_service__length_value
+msgid "Length Value"
+msgstr "Длина"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/const.py:0
+#, python-format
+msgid "Length must be a positive"
+msgstr "Длина должна быть положительным числом"
+
+#. module: cdek_delivery
+#: model_terms:ir.ui.view,arch_db:cdek_delivery.sale_order_cdek_service_form_view
+msgid "Length of packaging material"
+msgstr "Длина упаковочного материала"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/const.py:0
+#, python-format
+msgid "Length value must be greater than 0"
+msgstr "Длина должна быть больше 0"
+
+#. module: cdek_delivery
+#: model_terms:ir.ui.view,arch_db:cdek_delivery.search_cdek_office_view_form
+msgid "Load"
+msgstr "Загрузить"
+
+#. module: cdek_delivery
+#: model_terms:ir.ui.view,arch_db:cdek_delivery.delivery_carrier_form
+msgid "Load Tariffs"
+msgstr "Загрузить тарифы"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__load_the_operation_at_the_recipient
+msgid "Loading Operations at the Recipient"
+msgstr "Погрузка у получателя"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__loading_operations_at_the_sender
+msgid "Loading Operations at the Sender"
+msgstr "Погрузка у отправителя"
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_load_the_operation_at_the_recipient_product_template
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_loading_operations_at_the_sender_product_template
+msgid ""
+"Loading and unloading at the client's address, if the weight of cargo units "
+"does not exceed 80 kg.\n"
+"Additional service available only for tariffs:\n"
+"Mainline Super Express\n"
+"Mainline Express\n"
+"LTL (Consolidated Cargo)\n"
+"Economy Parcel\n"
+"Express"
+msgstr ""
+"Погрузо-разгрузочные работы по адресу клиента, если вес грузовых мест не превышает 80 кг.\n"
+"Дополнительная услуга доступна только для тарифов:\n"
+"Mainline Super Express\n"
+"Mainline Express\n"
+"LTL (Consolidated Cargo)\n"
+"Economy Parcel\n"
+"Express"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/models/delivery_carrier.py:0
+msgid "Long operation please try again later!"
+msgstr "Долгая операция, повторите попытку позже!"
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_get_up_floor_by_hand_product_template
+msgid ""
+"Manual floor ascent, with additional parameter — number of floors. The "
+"service is provided when it is necessary to carry oversized and heavy "
+"shipments (weighing from 10 kg) to a floor. (limit 150 kg)"
+msgstr ""
+"Ручной подъём на этаж с дополнительным параметром — количество этажей. Услуга предоставляется, когда необходимо поднять крупногабаритные и тяжёлые отправления (весом от 10 кг) на этаж. (лимит 150 кг)"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_cdek_tariff__mode_ids
+#: model:ir.model.fields,field_description:cdek_delivery.field_cdek_tariff_mode__mode
+msgid "Mode"
+msgstr "Режим"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_cdek_tariff__name
+#: model:ir.model.fields,field_description:cdek_delivery.field_cdek_tariff_mode__name
+msgid "Name"
+msgstr "Название"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/wizard/search_cdek_office.py:0
+#, python-format
+msgid "No offices found for current parameters"
+msgstr "По заданным параметрам пункты выдачи не найдены"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__notify_order_delivery
+msgid "Notification of Order Acceptance for Delivery"
+msgstr "Уведомление о приёме заказа на доставку"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__notify_order_created
+msgid "Notification of Order Creation in CDEK"
+msgstr "Уведомление о создании заказа в СДЭК"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/wizard/search_cdek_office.py:0
+#: code:addons/cdek_delivery/wizard/search_cdek_office_line.py:0
+#: model:ir.model.fields,field_description:cdek_delivery.field_res_partner__cdek_office_code
+#: model:ir.model.fields,field_description:cdek_delivery.field_res_users__cdek_office_code
+#: model:ir.model.fields,field_description:cdek_delivery.field_search_cdek_office__office_ids
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__cdek_tariff_mode__delivery_from__office
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__cdek_tariff_mode__delivery_to__office
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__delivery_carrier__cdek_default_delivery_type__office
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__res_partner__cdek_delivery_type__office
+#, python-format
+msgid "Office"
+msgstr "Пункт выдачи"
+
+#. module: cdek_delivery
+#: model_terms:ir.ui.view,arch_db:cdek_delivery.res_partner_form_view
+msgid "Office Code"
+msgstr "Код пункта выдачи"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/models/res_partner.py:0
+#, python-format
+msgid "Office code is not set"
+msgstr "Код пункта выдачи не указан"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/tools/cdek_request.py:0
+#, python-format
+msgid "Office code is not set for partner %s"
+msgstr "Код пункта выдачи не указан для контрагента %s"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/tools/cdek_request.py:0
+#, python-format
+msgid "Office not found for partner %s"
+msgstr "Пункт выдачи не найден для контрагента %s"
+
+#. module: cdek_delivery
+#: model_terms:ir.ui.view,arch_db:cdek_delivery.search_cdek_office_view_form
+msgid "Offices"
+msgstr "Пункты выдачи"
+
+#. module: cdek_delivery
+#: model_terms:ir.ui.view,arch_db:cdek_delivery.delivery_carrier_form
+msgid "Options"
+msgstr "Опции"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_sale_order_cdek_service__order_id
+msgid "Order"
+msgstr "Заказ"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,help:cdek_delivery.field_delivery_carrier__cdek_type
+msgid "Order type for CDEK delivery"
+msgstr "Тип заказа для доставки СДЭК"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__another
+msgid "Other"
+msgstr "Прочее"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_choose_delivery_carrier__order_package_dimensions
+msgid "Package Dimensions"
+msgstr "Габариты упаковки"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_choose_delivery_carrier__order_package_type_id
+msgid "Package Type"
+msgstr "Тип упаковки"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/models/cdek_tariff_mode.py:0
+#, python-format
+msgid "Package size is not valid for tariff %s"
+msgstr "Размер упаковки не подходит для тарифа %s"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/models/cdek_tariff_mode.py:0
+#, python-format
+msgid "Package weight calculation is not valid for tariff %s"
+msgstr "Расчёт веса упаковки не подходит для тарифа %s"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/models/cdek_tariff_mode.py:0
+#, python-format
+msgid "Package weight is not valid for tariff %s"
+msgstr "Вес упаковки не подходит для тарифа %s"
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_waste_paper_product_template
+msgid ""
+"Packaging paper (recycled, class E). Width 0.42 m.\n"
+"Designed for packing various types of shipments (cargo) and filling voids "
+"inside the packaging.\n"
+"Available modes: door-door, door-warehouse, warehouse-door, warehouse-"
+"warehouse, door-postamat, warehouse-postamat"
+msgstr ""
+"Упаковочная бумага (вторичная, класс E). Ширина 0,42 м.\n"
+"Предназначена для упаковки различных типов отправлений (грузов) и заполнения пустот внутри упаковки.\n"
+"Доступные режимы: дверь-дверь, дверь-склад, склад-дверь, склад-склад, дверь-постамат, склад-постамат"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__part_deliv
+msgid "Partial Delivery"
+msgstr "Частичная доставка"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_search_cdek_office__partner_id
+msgid "Partner"
+msgstr "Партнёр"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_choose_delivery_carrier__order_partner_tariff_id
+msgid "Partner Tariff"
+msgstr "Тариф контрагента"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_product__cdek_reference_type__phone
+msgid "Phone"
+msgstr "Телефон"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_sale_order_cdek_service__phone_value
+msgid "Phone Value"
+msgstr "Номер телефона"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/const.py:0
+#, python-format
+msgid "Phone must be a valid phone number"
+msgstr "Укажите корректный номер телефона"
+
+#. module: cdek_delivery
+#: model_terms:ir.ui.view,arch_db:cdek_delivery.sale_order_cdek_service_form_view
+msgid "Phone number"
+msgstr "Номер телефона"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/const.py:0
+#, python-format
+msgid "Phone value must be a valid phone number"
+msgstr "Номер телефона должен быть корректным"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__photo_of_documents
+msgid "Photo of Documents"
+msgstr "Фото документов"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__take_sender
+msgid "Pickup in Sender City"
+msgstr "Забор в городе отправителя"
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_package_a_2_light_express_product_template
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_package_a_3_light_express_product_template
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_package_a_4_light_express_product_template
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_package_a_5_light_express_product_template
+msgid ""
+"Plain courier package (white) made of waterproof multilayer polyethylene."
+msgstr ""
+"Обычный курьерский пакет (белый) из водонепроницаемого многослойного полиэтилена."
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/wizard/choose_delivery_carrier.py:0
+#, python-format
+msgid "Please select a package type."
+msgstr "Выберите тип упаковки."
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/wizard/search_cdek_office.py:0
+#, python-format
+msgid "Point selected"
+msgstr "Пункт выбран"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/wizard/search_cdek_office.py:0
+#: code:addons/cdek_delivery/wizard/search_cdek_office_line.py:0
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__cdek_tariff_mode__delivery_from__postbox
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__cdek_tariff_mode__delivery_to__postbox
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__res_partner__cdek_delivery_type__postbox
+#, python-format
+msgid "Postbox"
+msgstr "Постамат"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__carton_filler
+msgid "Pressed Cardboard Filler (55x14x2.3 cm)"
+msgstr "Прессованный картонный наполнитель (55×14×2,3 см)"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_product__cdek_reference_type__price
+msgid "Price"
+msgstr "Цена"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_sale_order_cdek_service__price_value
+msgid "Price Value"
+msgstr "Сумма"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/const.py:0
+#, python-format
+msgid "Price must be a positive"
+msgstr "Цена должна быть положительным числом"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/const.py:0
+#, python-format
+msgid "Price value must be greater than 0"
+msgstr "Сумма должна быть больше 0"
+
+#. module: cdek_delivery
+#: model_terms:ir.ui.view,arch_db:cdek_delivery.sale_order_cdek_service_kanban_view
+msgid "Price:"
+msgstr "Цена:"
+
+#. module: cdek_delivery
+#: model_terms:ir.ui.view,arch_db:cdek_delivery.delivery_carrier_form
+msgid "Print Type"
+msgstr "Тип печати"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,help:cdek_delivery.field_delivery_carrier__cdek_print_type
+msgid "Print type for CDEK delivery"
+msgstr "Тип печати для доставки СДЭК"
+
+#. module: cdek_delivery
+#: model:ir.model,name:cdek_delivery.model_product_template
+msgid "Product"
+msgstr "Товар"
+
+#. module: cdek_delivery
+#: model:ir.model,name:cdek_delivery.model_product_product
+msgid "Product Variant"
+msgstr "Вариант товара"
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_xl_box_inner_crate_product_template
+msgid ""
+"Protective insert (shock-absorbing cardboard frame) inserted inside the box. "
+"The frame is designed for the specific box \"Box (18 kg 60×35×30 cm)\". This "
+"additional service must be passed only together with the corresponding box "
+"CARTON_BOX_XL_18_KILOS."
+msgstr ""
+"Защитная вставка (амортизирующая картонная рама), устанавливаемая внутри коробки. Рама рассчитана на конкретную коробку «Коробка (18 кг 60×35×30 см)». Эта дополнительная услуга должна передаваться только вместе с соответствующей коробкой CARTON_BOX_XL_18_KILOS."
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_20_kg_box_inner_crate_product_template
+msgid ""
+"Protective insert (shock-absorbing cardboard frame) inserted inside the box. "
+"The frame is designed for the specific box \"Box (20 kg 47×40×43 cm)\". This "
+"additional service must be passed only together with the corresponding box "
+"CARTON_BOX_20KG."
+msgstr ""
+"Защитная вставка (амортизирующая картонная рама), устанавливаемая внутри коробки. Рама рассчитана на конкретную коробку «Коробка (20 кг 47×40×43 см)». Эта дополнительная услуга должна передаваться только вместе с соответствующей коробкой CARTON_BOX_20KG."
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_30_kg_box_inner_crate_product_template
+msgid ""
+"Protective insert (shock-absorbing cardboard frame) inserted inside the box. "
+"The frame is designed for the specific box \"Box (30 kg 69×39×42 cm)\". This "
+"additional service must be passed only together with the corresponding box "
+"CARTON_BOX_30KG."
+msgstr ""
+"Защитная вставка (амортизирующая картонная рама), устанавливаемая внутри коробки. Рама рассчитана на конкретную коробку «Коробка (30 кг 69×39×42 см)». Эта дополнительная услуга должна передаваться только вместе с соответствующей коробкой CARTON_BOX_30KG."
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_carton_filler_product_template
+msgid ""
+"Protective insert made of sheet pressed cardboard.\n"
+"Used for:\n"
+"- internal bracing inside corrugated box\n"
+"- wrapping and separating contents inside corrugated box\n"
+"- filling voids.\n"
+"Available for all warehouse tariffs."
+msgstr ""
+"Защитная вставка из листового прессованного картона.\n"
+"Используется для:\n"
+"- внутреннего крепления внутри гофрокороба\n"
+"- обёртывания и разделения содержимого внутри гофрокороба\n"
+"- заполнения пустот.\n"
+"Доступна для всех складских тарифов."
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_delivery_carrier__delivery_type
+#: model:ir.model.fields,field_description:cdek_delivery.field_res_partner__delivery_carrier_type
+#: model:ir.model.fields,field_description:cdek_delivery.field_res_users__delivery_carrier_type
+#: model:ir.model.fields,field_description:cdek_delivery.field_sale_order__carrier_type
+msgid "Provider"
+msgstr "Провайдер"
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_insurance_product_template
+msgid ""
+"Providing insurance protection for the parcel.\n"
+"For \"E-commerce\" order types, the insurance surcharge is calculated from "
+"the declared value of the shipment and the service is charged automatically; "
+"not allowed for independent entry in services.code.\n"
+"For \"Delivery\" order types, if the service is not provided by the user in "
+"services.code, it is added automatically with parameter services.parameter = "
+"1. This value will be processed by the system so that the insurance will be "
+"free. However, we recommend passing the actual declared value of the "
+"shipment."
+msgstr ""
+"Предоставление страховой защиты посылки.\n"
+"Для типов заказов «E-commerce» страховая надбавка рассчитывается от объявленной стоимости отправления, и услуга начисляется автоматически; самостоятельный ввод в services.code не допускается.\n"
+"Для типов заказов «Delivery», если услуга не указана пользователем в services.code, она добавляется автоматически с параметром services.parameter = 1. Это значение будет обработано системой так, что страхование будет бесплатным. Однако мы рекомендуем передавать фактическую объявленную стоимость отправления."
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/const.py:0
+#, python-format
+msgid "Quantity must be an integer > 0"
+msgstr "Количество должно быть целым числом > 0"
+
+#. module: cdek_delivery
+#: model_terms:ir.ui.view,arch_db:cdek_delivery.sale_order_cdek_service_form_view
+msgid "Quantity of packages"
+msgstr "Количество упаковок"
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_adult_goods_product_template
+msgid ""
+"Recipient age verification service (18+ goods). The service is offered only "
+"when the 18+ feature is present in the contract."
+msgstr ""
+"Услуга проверки возраста получателя (товары 18+). Услуга предлагается только при наличии функции 18+ в договоре."
+
+#. module: cdek_delivery
+#: model_terms:ir.ui.view,arch_db:cdek_delivery.search_cdek_office_view_form
+msgid "Reload"
+msgstr "Обновить"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__sms_notifications_for_the_recipient
+msgid "SMS Notification of Order Arrival"
+msgstr "СМС-уведомление о поступлении заказа"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__sms
+msgid "SMS Notification of Order Delivery"
+msgstr "СМС-уведомление о вручении заказа"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__sms_notifications_for_expiration_date
+msgid "SMS Notification of Storage Expiration"
+msgstr "СМС-уведомление об окончании срока хранения"
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_notify_order_delivery_product_template
+msgid ""
+"SMS notification about delivery to mobile phone. Recipient's country: "
+"Russia, Kazakhstan, Belarus. When adding the additional service, the "
+"notification number will be taken from the recipient's data. Check the "
+"current cost with your assigned manager."
+msgstr ""
+"СМС-уведомление о доставке на мобильный телефон. Страна получателя: Россия, Казахстан, Беларусь. При добавлении дополнительной услуги номер для уведомления будет взят из данных получателя. Уточните актуальную стоимость у назначенного менеджера."
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_sms_notifications_for_the_recipient_product_template
+msgid ""
+"SMS notification of order arrival for the recipient. Available for \"E-"
+"commerce\" type orders."
+msgstr ""
+"СМС-уведомление получателю о прибытии заказа. Доступно для заказов типа «E-commerce»."
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_sms_notifications_for_expiration_date_product_template
+msgid ""
+"SMS notification of storage period expiration for the recipient. Available "
+"for \"E-commerce\" type orders."
+msgstr ""
+"СМС-уведомление получателю об окончании срока хранения. Доступно для заказов типа «E-commerce»."
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_notify_order_created_product_template
+msgid ""
+"SMS notification to the recipient about order creation in CDEK.\n"
+"Applied when creating an order.\n"
+"Recipient's country: Russia, Kazakhstan, Belarus.\n"
+"When adding the additional service, the notification number will be taken "
+"from the recipient's data. Check the current cost with your assigned manager."
+msgstr ""
+"СМС-уведомление получателю о создании заказа в СДЭК.\n"
+"Применяется при создании заказа.\n"
+"Страна получателя: Россия, Казахстан, Беларусь.\n"
+"При добавлении дополнительной услуги номер для уведомления будет взят из данных получателя. Уточните актуальную стоимость у назначенного менеджера."
+
+#. module: cdek_delivery
+#: model:ir.model,name:cdek_delivery.model_sale_order_cdek_service
+msgid "Sale Order CDEK Service"
+msgstr "Услуга СДЭК заказа"
+
+#. module: cdek_delivery
+#: model:ir.model,name:cdek_delivery.model_sale_order
+msgid "Sales Order"
+msgstr "Заказ на продажу"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_search_cdek_office_line__search_id
+msgid "Search"
+msgstr "Поиск"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/models/res_partner.py:0
+#: code:addons/cdek_delivery/wizard/search_cdek_office.py:0
+#, python-format
+msgid "Search CDEK Office"
+msgstr "Поиск пункта выдачи СДЭК"
+
+#. module: cdek_delivery
+#: model:ir.model,name:cdek_delivery.model_search_cdek_office_line
+msgid "Search CDEK Office Line"
+msgstr "Строка поиска пункта СДЭК"
+
+#. module: cdek_delivery
+#: model_terms:ir.ui.view,arch_db:cdek_delivery.res_partner_form_view
+msgid "Search Office"
+msgstr "Найти пункт выдачи"
+
+#. module: cdek_delivery
+#: model_terms:ir.ui.view,arch_db:cdek_delivery.search_cdek_office_view_form
+msgid "Search Options"
+msgstr "Параметры поиска"
+
+#. module: cdek_delivery
+#: model_terms:ir.ui.view,arch_db:cdek_delivery.search_cdek_office_view_form
+msgid "Select"
+msgstr "Выбрать"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__self_clearing_customs_for_b2b_export
+msgid "Self-Clearing Customs B2B Export"
+msgstr "Самостоятельная таможенная очистка B2B экспорт"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__self_clearing_customs_for_b2b_import
+msgid "Self-Clearing Customs B2B Import"
+msgstr "Самостоятельная таможенная очистка B2B импорт"
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_self_clearing_customs_for_b2b_export_product_template
+msgid "Self-customs clearance B2B export"
+msgstr "Самостоятельное таможенное оформление B2B экспорт"
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_self_clearing_customs_for_b2b_import_product_template
+msgid "Self-customs clearance B2B import"
+msgstr "Самостоятельное таможенное оформление B2B импорт"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/tools/cdek_request.py:0
+#, python-format
+msgid "Sender is required for order type %s"
+msgstr "Для типа заказа %s требуется отправитель"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_sale_order_cdek_service__product_id
+#: model_terms:ir.ui.view,arch_db:cdek_delivery.sale_order_cdek_service_form_view
+#: model_terms:ir.ui.view,arch_db:cdek_delivery.sale_order_cdek_service_tree_view
+msgid "Service"
+msgstr "Услуга"
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_another_product_template
+msgid ""
+"Service for adding additional services, charged by CDEK manager. Not allowed "
+"for independent entry in services.code field."
+msgstr ""
+"Услуга для добавления дополнительных услуг, начисляемых менеджером СДЭК. Самостоятельный ввод в поле services.code не допускается."
+
+#. module: cdek_delivery
+#: model_terms:ir.ui.view,arch_db:cdek_delivery.sale_order_cdek_service_kanban_view
+msgid "Service image"
+msgstr "Изображение услуги"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_choose_delivery_carrier__order_cdek_service_ids
+msgid "Services"
+msgstr "Услуги"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/models/delivery_carrier.py:0
+#, python-format
+msgid "Shipment #%s was canceled"
+msgstr "Отправление #%s было отменено"
+
+#. module: cdek_delivery
+#: model:ir.model,name:cdek_delivery.model_delivery_carrier
+msgid "Shipping Methods"
+msgstr "Методы доставки"
+
+#. module: cdek_delivery
+#: model_terms:ir.ui.view,arch_db:cdek_delivery.cdek_tariff_form_view
+msgid "Size"
+msgstr "Размер"
+
+#. module: cdek_delivery
+#: model:ir.model,name:cdek_delivery.model_stock_package_type
+msgid "Stock package type"
+msgstr "Тип упаковки"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_cdek_tariff_mode__tariff_id
+#: model_terms:ir.ui.view,arch_db:cdek_delivery.res_partner_form_view
+msgid "Tariff"
+msgstr "Тариф"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_choose_delivery_carrier__partner_tariff_dimensions
+msgid "Tariff Dimensions"
+msgstr "Габариты по тарифу"
+
+#. module: cdek_delivery
+#: model_terms:ir.ui.view,arch_db:cdek_delivery.cdek_tariff_form_view
+msgid "Tariff Name"
+msgstr "Название тарифа"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/tools/cdek_request.py:0
+#, python-format
+msgid "Tariff is not set for partner %s"
+msgstr "Тариф не указан для контрагента %s"
+
+#. module: cdek_delivery
+#: model:ir.ui.menu,name:cdek_delivery.menu_cdek_delivery_tariffs
+#: model_terms:ir.ui.view,arch_db:cdek_delivery.delivery_carrier_form
+msgid "Tariffs"
+msgstr "Тарифы"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/models/delivery_carrier.py:0
+#, python-format
+msgid "Tariffs loaded!"
+msgstr "Тарифы загружены!"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__cdek_tariff_mode__delivery_from__terminal
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__cdek_tariff_mode__delivery_to__terminal
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__delivery_carrier__cdek_default_delivery_type__terminal
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__res_partner__cdek_delivery_type__terminal
+msgid "Terminal"
+msgstr "Терминал"
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_trying_on_product_template
+msgid ""
+"The courier delivers several units of goods (clothing, footwear, etc.) to "
+"the buyer for trying on. Only for clients with an E-commerce type contract. "
+"Not applicable in the same order with the additional service \"Ban on "
+"inspection of contents\". Not applicable to postamat orders."
+msgstr ""
+"Курьер доставляет покупателю несколько единиц товара (одежда, обувь и т. д.) для примерки. Только для клиентов с договором типа E-commerce. Не применяется в одном заказе с дополнительной услугой «Запрет осмотра вложений». Не применяется к заказам в постамат."
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_thermal_mode_product_template
+msgid ""
+"The service is only available with warehouse-to-warehouse delivery mode. "
+"Routes for which thermal mode delivery is possible: Kemerovo-Novokuznetsk, "
+"Novosibirsk-Krasnoyarsk, Novosibirsk-Kemerovo, Novosibirsk-Tomsk, "
+"Novosibirsk-Omsk, Novosibirsk-Barnaul, Barnaul-Gorno-Altaysk AND IN THE "
+"OPPOSITE DIRECTIONS!"
+msgstr ""
+"Услуга доступна только при режиме доставки склад-склад. Маршруты, для которых возможна доставка в терморежиме: Кемерово-Новокузнецк, Новосибирск-Красноярск, Новосибирск-Кемерово, Новосибирск-Томск, Новосибирск-Омск, Новосибирск-Барнаул, Барнаул-Горно-Алтайск И В ОБРАТНЫХ НАПРАВЛЕНИЯХ!"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/models/res_partner.py:0
+#, python-format
+msgid "The tariff mode should be delivered from %s"
+msgstr "Режим тарифа должен предусматривать отправку от %s"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/models/res_partner.py:0
+#, python-format
+msgid "The tariff mode should be delivered to %s"
+msgstr "Режим тарифа должен предусматривать доставку до %s"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__thermal_mode
+msgid "Thermal Mode"
+msgstr "Терморежим"
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_carton_box_xs_product_template
+msgid ""
+"Three-layer corrugated cardboard box 170×125×95 mm. Maximum capacity — 0.5 "
+"kg.\n"
+"Available modes: warehouse-door, warehouse-warehouse, warehouse-postamat"
+msgstr ""
+"Трёхслойный гофрокороб 170×125×95 мм. Максимальная вместимость — 0,5 кг.\n"
+"Доступные режимы: склад-дверь, склад-склад, склад-постамат"
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_carton_box_s_2_kilos_product_template
+msgid ""
+"Three-layer corrugated cardboard box 230×190×100 mm. Maximum capacity — 2 "
+"kg.\n"
+"Available modes: warehouse-door, warehouse-warehouse, warehouse-postamat"
+msgstr ""
+"Трёхслойный гофрокороб 230×190×100 мм. Максимальная вместимость — 2 кг.\n"
+"Доступные режимы: склад-дверь, склад-склад, склад-постамат"
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_carton_box_3kg_product_template
+msgid ""
+"Three-layer corrugated cardboard box 240×240×210 mm. Maximum capacity — 3 "
+"kg.\n"
+"Available modes: door-door, door-warehouse, warehouse-door, warehouse-"
+"warehouse, warehouse-postamat"
+msgstr ""
+"Трёхслойный гофрокороб 240×240×210 мм. Максимальная вместимость — 3 кг.\n"
+"Доступные режимы: дверь-дверь, дверь-склад, склад-дверь, склад-склад, склад-постамат"
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_carton_box_l_12_kilos_product_template
+msgid ""
+"Three-layer corrugated cardboard box 310×250×380 mm. Maximum capacity — 12 "
+"kg.\n"
+"Available modes: warehouse-door, warehouse-warehouse, warehouse-postamat"
+msgstr ""
+"Трёхслойный гофрокороб 310×250×380 мм. Максимальная вместимость — 12 кг.\n"
+"Доступные режимы: склад-дверь, склад-склад, склад-постамат"
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_carton_box_m_product_template
+msgid ""
+"Three-layer corrugated cardboard box 330×250×155 mm. Maximum capacity — 5 "
+"kg.\n"
+"Available modes: warehouse-door, warehouse-warehouse, warehouse-postamat"
+msgstr ""
+"Трёхслойный гофрокороб 330×250×155 мм. Максимальная вместимость — 5 кг.\n"
+"Доступные режимы: склад-дверь, склад-склад, склад-постамат"
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_carton_box_2kg_product_template
+msgid ""
+"Three-layer corrugated cardboard box 340×240×100 mm. Maximum capacity — 2 "
+"kg.\n"
+"Available modes: door-door, door-warehouse, warehouse-door, warehouse-"
+"warehouse, warehouse-postamat"
+msgstr ""
+"Трёхслойный гофрокороб 340×240×100 мм. Максимальная вместимость — 2 кг.\n"
+"Доступные режимы: дверь-дверь, дверь-склад, склад-дверь, склад-склад, склад-постамат"
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_carton_box_5kg_product_template
+msgid ""
+"Three-layer corrugated cardboard box 400×240×210 mm. Maximum capacity — 5 "
+"kg.\n"
+"Available modes: door-door, door-warehouse, warehouse-door, warehouse-"
+"warehouse, warehouse-postamat"
+msgstr ""
+"Трёхслойный гофрокороб 400×240×210 мм. Максимальная вместимость — 5 кг.\n"
+"Доступные режимы: дверь-дверь, дверь-склад, склад-дверь, склад-склад, склад-постамат"
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_carton_box_10kg_product_template
+msgid ""
+"Three-layer corrugated cardboard box 400×350×280 mm. Maximum capacity — 10 "
+"kg.\n"
+"Available modes: warehouse-door, warehouse-warehouse, warehouse-postamat"
+msgstr ""
+"Трёхслойный гофрокороб 400×350×280 мм. Максимальная вместимость — 10 кг.\n"
+"Доступные режимы: склад-дверь, склад-склад, склад-постамат"
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_carton_box_20kg_product_template
+msgid ""
+"Three-layer corrugated cardboard box 470×400×430 mm. Maximum capacity — 20 "
+"kg.\n"
+"Available modes: warehouse-door, warehouse-warehouse"
+msgstr ""
+"Трёхслойный гофрокороб 470×400×430 мм. Максимальная вместимость — 20 кг.\n"
+"Доступные режимы: склад-дверь, склад-склад"
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_carton_box_xl_18_kilos_product_template
+msgid ""
+"Three-layer corrugated cardboard box 600×350×300 mm. Maximum capacity — 18 "
+"kg.\n"
+"Available modes: warehouse-door, warehouse-warehouse, warehouse-postamat"
+msgstr ""
+"Трёхслойный гофрокороб 600×350×300 мм. Максимальная вместимость — 18 кг.\n"
+"Доступные режимы: склад-дверь, склад-склад, склад-постамат"
+
+#. module: cdek_delivery
+#: model_terms:product.template,description:cdek_delivery.product_product_cdek_carton_box_30kg_product_template
+msgid ""
+"Three-layer corrugated cardboard box 690×390×420 mm. Maximum capacity — 30 "
+"kg.\n"
+"Available modes: warehouse-door, warehouse-warehouse"
+msgstr ""
+"Трёхслойный гофрокороб 690×390×420 мм. Максимальная вместимость — 30 кг.\n"
+"Доступные режимы: склад-дверь, склад-склад"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_sale_order_cdek_service__total_price
+msgid "Total Price"
+msgstr "Итого"
+
+#. module: cdek_delivery
+#: model:ir.model,name:cdek_delivery.model_stock_picking
+msgid "Transfer"
+msgstr "Перемещение"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__trying_on
+msgid "Trying On"
+msgstr "Примерка"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_search_cdek_office__point_type
+#: model:ir.model.fields,field_description:cdek_delivery.field_search_cdek_office_line__type
+#: model_terms:ir.ui.view,arch_db:cdek_delivery.delivery_carrier_form
+msgid "Type"
+msgstr "Тип"
+
+#. module: cdek_delivery
+#. odoo-python
+#: code:addons/cdek_delivery/models/delivery_carrier.py:0
+#, python-format
+msgid "Unknown error"
+msgstr "Неизвестная ошибка"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_sale_order_cdek_service__value
+msgid "Value"
+msgstr "Значение"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__product_template__cdek_reference__waste_paper
+msgid "Waste Paper"
+msgstr "Макулатура"
+
+#. module: cdek_delivery
+#: model:ir.model.fields.selection,name:cdek_delivery.selection__delivery_carrier__cdek_print_type__waybill
+msgid "Waybill"
+msgstr "Накладная"
+
+#. module: cdek_delivery
+#: model_terms:ir.ui.view,arch_db:cdek_delivery.cdek_tariff_form_view
+msgid "Weight"
+msgstr "Вес"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_cdek_tariff__weight_calc_max
+msgid "Weight Calc Max"
+msgstr "Макс. вес для расчёта"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_cdek_tariff__weight_max
+msgid "Weight Max"
+msgstr "Макс. вес"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_cdek_tariff__weight_min
+msgid "Weight Min"
+msgstr "Мин. вес"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_cdek_tariff__width_max
+msgid "Width Max"
+msgstr "Макс. ширина"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_cdek_tariff__width_min
+msgid "Width Min"
+msgstr "Мин. ширина"
+
+#. module: cdek_delivery
+#: model:ir.model.fields,field_description:cdek_delivery.field_search_cdek_office__zip
+msgid "Zip"
+msgstr "Индекс"
+
+#, python-format
+#~ msgid "%s: CDEK city or street not set!"
+#~ msgstr "%s: СДЭК: город или улица не указаны!"
+
+#, python-format
+#~ msgid "%s: CDEK office code not set!"
+#~ msgstr "%s: СДЭК: код пункта выдачи не указан!"
+
+#, python-format
+#~ msgid "%s: CDEK phone not set!"
+#~ msgstr "%s: СДЭК: телефон не указан!"
+
+#~ msgid "CDEK Delivery Type"
+#~ msgstr "Тип доставки СДЭК"
+
+#~ msgid "CDEK Package Type"
+#~ msgstr "Тип упаковки СДЭК"
+
+#~ msgid "CDEK Rate"
+#~ msgstr "Тариф СДЭК"
+
+#~ msgid "Cdek Delivery From Type"
+#~ msgstr "Тип отправления СДЭК"
+
+#~ msgid "Cdek Delivery Partner"
+#~ msgstr "Партнер доставки СДЭК"
+
+#~ msgid "Cdek Rate"
+#~ msgstr "Тариф СДЭК"
+
+#~ msgid "Cdek Total Weight"
+#~ msgstr "Общий вес СДЭК"
+
+#~ msgid "Delivery Mode"
+#~ msgstr "Режим доставки"
+
+#~ msgid "Cdek Delivery Type"
+#~ msgstr "Тип доставки"
+
+#~ msgid "Description"
+#~ msgstr "Описание"
+
+#~ msgid "Packages"
+#~ msgstr "Упаковки"
+
+#, python-format
+#~ msgid "Packages not found for picking %s"
+#~ msgstr "Упаковки не найдены для перемещения %s"
+
+#~ msgid "Rate"
+#~ msgstr "Тариф"
+
+#~ msgid "Upload"
+#~ msgstr "Загрузить"
+
+#~ msgid "CDEK Error: Order not found"
+#~ msgstr "Ошибка СДЭК: заказ не найден"
+
+#~ msgid "Cdek City Code"
+#~ msgstr "Код города"
+
+#~ msgid "Tariff Modes"
+#~ msgstr "Режимы тарифа"
+
+#~ msgid "Office Ids"
+#~ msgstr "Пункты выдачи"
+
+#~ msgid "Cdek Client Id"
+#~ msgstr "Идентификатор клиента СДЭК"

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!--
+    Copyright (C) 2025 XXP
+    License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
+    -->
+
+    <record id="choose_delivery_carrier_view_form" model="ir.ui.view">
+        <field name="name">choose.delivery.carrier.cdek.form</field>
+        <field name="model">choose.delivery.carrier</field>
+        <field name="inherit_id" ref="delivery.choose_delivery_carrier_view_form" />
+        <field name="arch" type="xml">
+            <field name="display_price" position="attributes">
+                <attribute name="force_save">1</attribute>
+                <attribute name="readonly">1</attribute>
+            </field>
+            <group position="after">
+                <field name="carrier_delivery_type" invisible="1" />
+                <field name="cdek_delivery_type" invisible="1" />
+                <group attrs="{'invisible': [('carrier_delivery_type', '!=', 'cdek')]}">
+                    <group>
+                        <field name="order_package_type_id" />
+                        <field name="order_partner_tariff_id" />
+                    </group>
+                    <group>
+                        <field name="order_package_dimensions" />
+                        <field name="partner_tariff_dimensions" />
+                    </group>
+                </group>
+                <separator
+                    string="Additional delivery services"
+                    attrs="{'invisible': [('carrier_delivery_type', '!=', 'cdek')]}"
+                />
+                <field
+                    name="order_cdek_service_ids"
+                    widget="one2many"
+                    attrs="{'invisible': [('carrier_delivery_type', '!=', 'cdek')]}"
+                    mode="kanban"
+                    context="{'default_order_id': order_id}"
+                />
+            </group>
+        </field>
+    </record>
+
+</odoo>

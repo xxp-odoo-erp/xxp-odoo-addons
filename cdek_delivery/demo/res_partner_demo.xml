@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!--
+    Copyright (C) 2025 XXP
+    License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
+    -->
+
+    <record id="base.main_partner" model="res.partner">
+        <field name="cdek_delivery_type">office</field>
+        <field name="cdek_office_code">KLG10</field>
+        <field name="city">Калуга</field>
+        <field name="country_id" ref="base.ru" />
+        <field name="state_id" eval="False" />
+        <field name="street" eval="False" />
+        <field name="zip" />
+    </record>
+
+    <record id="stock.res_partner_address_41" model="res.partner">
+        <field name="cdek_delivery_type">door</field>
+        <field name="street">Воровского, 12</field>
+        <field name="city">Москва</field>
+        <field name="phone">+7 495 123-45-67</field>
+        <field name="mobile">+7 916 123-45-67</field>
+        <field name="country_id" ref="base.ru" />
+        <field name="state_id" eval="False" />
+        <field name="zip" />
+    </record>
+
+    <record id="res_partner_cdek_address_1" model="res.partner">
+        <field name="name">Ivan Ivanov [CDEK Delivery From Address]</field>
+        <field name="cdek_delivery_type">door</field>
+        <field name="city">Киров</field>
+        <field name="phone">+7 8332 12-34-56</field>
+        <field name="mobile">+7 912 345-67-89</field>
+        <field name="country_id" ref="base.ru" />
+        <field name="state_id" eval="False" />
+        <field name="street">ул. Карла Либкнехта, 69</field>
+        <field name="zip">610020</field>
+    </record>
+
+    <record id="res_partner_cdek_address_2" model="res.partner">
+        <field name="name">Petr Petrov [CDEK Delivery To Office]</field>
+        <field name="cdek_delivery_type">office</field>
+        <field name="cdek_office_code">MSK163</field>
+        <field name="city">Москва</field>
+        <field name="country_id" ref="base.ru" />
+        <field name="state_id" eval="False" />
+        <field name="street" eval="False" />
+        <field name="zip" />
+    </record>
+</odoo>

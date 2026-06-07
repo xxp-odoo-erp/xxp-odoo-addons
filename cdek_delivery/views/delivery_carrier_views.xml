@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!--
+    Copyright (C) 2025 XXP
+    License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
+    -->
+
+    <record id="delivery_carrier_form" model="ir.ui.view">
+        <field name="name">delivery.carrier.form.inherit.cdek</field>
+        <field name="model">delivery.carrier</field>
+        <field name="inherit_id" ref="delivery.view_delivery_carrier_form" />
+        <field name="arch" type="xml">
+            <button name="toggle_prod_environment" position="before">
+                <button
+                    name="%(action_open_cdek_tariffs)d"
+                    type="action"
+                    class="oe_stat_button"
+                    string="CDEK Tariffs"
+                    icon="fa-sitemap"
+                    attrs="{'invisible': [('delivery_type', '!=', 'cdek')]}"
+                />
+            </button>
+            <page name="destination" position="before">
+                <page
+                    string="CDEK Configuration"
+                    name="cdek_configuration"
+                    attrs="{'invisible': [('delivery_type', '!=', 'cdek')]}"
+                >
+                    <div class="o_row">
+                        <div
+                            class="alert alert-info"
+                            attrs="{'invisible': ['|', ('delivery_type', '!=', 'cdek'), ('prod_environment', '=', True)]}"
+                            role="alert"
+                        >
+                            <span class="fa fa-info-circle" />
+                            <span>
+                                If you are not using a production environment, a test client ID and client secret are used.
+                            </span>
+                        </div>
+                    </div>
+                    <group>
+                        <group
+                            string="Credentials"
+                            name="cdek_credentials"
+                            attrs="{'invisible': [('delivery_type', '!=', 'cdek')]}"
+                        >
+                            <field
+                                name="cdek_client_id"
+                                attrs="{'invisible': ['|', ('delivery_type', '!=', 'cdek'), ('prod_environment', '=', False)]}"
+                            />
+                            <field
+                                name="cdek_client_secret"
+                                attrs="{'invisible': ['|', ('delivery_type', '!=', 'cdek'), ('prod_environment', '=', False)]}"
+                            />
+                        </group>
+                        <group
+                            string="Options"
+                            name="cdek_options"
+                            attrs="{'invisible': [('delivery_type', '!=', 'cdek')]}"
+                        >
+                            <field name="cdek_type" string="Type" />
+                            <field name="cdek_default_delivery_type" />
+                            <field name="cdek_print_type" string="Print Type" />
+                        </group>
+                        <group string="Dimensions" name="cdek_dimensions">
+                            <field name="default_height" />
+                            <field name="default_length" />
+                            <field name="default_width" />
+                        </group>
+                    </group>
+                    <separator string="Tariffs" />
+                    <group>
+                        <label
+                            class="oe_inline"
+                            string="Available Tariffs"
+                            for="cdek_available_tariff_ids"
+                            attrs="{'invisible': [('delivery_type', '!=', 'cdek')]}"
+                        />
+                        <div
+                            class="o_row o_row_readonly"
+                            attrs="{'invisible': [('delivery_type', '!=', 'cdek')]}"
+                        >
+                            <field
+                                name="cdek_available_tariff_ids"
+                                options="{'create': False, 'delete': False}"
+                                attrs="{'invisible': [('delivery_type', '!=', 'cdek')]}"
+                                widget="many2many_tags"
+                            />
+                            <button
+                                string="Load Tariffs"
+                                name="action_upload_cdek_tariffs"
+                                type="object"
+                                icon="fa-upload"
+                                class="btn-primary"
+                            />
+                        </div>
+                    </group>
+                </page>
+            </page>
+        </field>
+    </record>
+
+</odoo>
