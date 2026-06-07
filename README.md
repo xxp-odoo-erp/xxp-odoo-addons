@@ -18,7 +18,11 @@ Odoo addons developed and maintained by XXP
 
 [//]: # (addons)
 
-This part will be replaced when running the oca-gen-addons-table script from xxp-odoo-erp/maintainer-tools.
+Available addons
+----------------
+addon | version | maintainers | summary
+--- | --- | --- | ---
+[cdek_delivery](cdek_delivery/) | 16.0.2.0.0 |  | Send shipping through CDEK and track them online
 
 [//]: # (end addons)
 
