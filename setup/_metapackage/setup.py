@@ -4,8 +4,8 @@ with open('VERSION.txt', 'r') as f:
     version = f.read().strip()
 
 setuptools.setup(
-    name="odoo-addons-xxp-odoo-erp-odoo-addons",
-    description="Meta package for xxp-odoo-erp-odoo-addons Odoo addons",
+    name="odoo-addons-xxp-odoo-erp-xxp-odoo-addons",
+    description="Meta package for xxp-odoo-erp-xxp-odoo-addons Odoo addons",
     version=version,
     install_requires=[
         'odoo-addon-cdek_delivery>=16.0dev,<16.1dev',
