@@ -1,0 +1,1 @@
+No special configuration required. Set the Allowed Companies in the user settings to grant user access.

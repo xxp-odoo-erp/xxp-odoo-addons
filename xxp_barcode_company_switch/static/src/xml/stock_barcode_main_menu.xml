@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+
+    <t t-inherit="stock_barcode.MainMenu" t-inherit-mode="extension" owl="1">
+        <xpath expr="//a[hasclass('o_stock_barcode_menu')]" position="before">
+            <div class="o_barcode_company_dropdown_menu" t-if="isDisplayCompanySwitch">
+                <BarcodeSwitchCompany />
+            </div>
+        </xpath>
+    </t>
+
+</templates>
