@@ -9,6 +9,10 @@ on:
       - "16.0"
       - "16.0-ocabot-*"
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   unreleased-deps:
     runs-on: ubuntu-latest
@@ -57,6 +61,8 @@ jobs:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
+      - name: Clone EE repo
+        run: curl -sSL https://${{ secrets.GIT_PUSH_TOKEN }}@github.com/xxp-odoo-erp/enterprise/tarball/$ODOO_VERSION | tar zxf - --strip-components=1 -C $ADDONS_PATH
       - name: Install addons and dependencies
         run: oca_install_addons
       - name: Check licenses

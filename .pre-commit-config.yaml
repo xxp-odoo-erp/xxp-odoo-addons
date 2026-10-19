@@ -44,7 +44,7 @@ repos:
         files: '^(\.travis\.yml|\.t2d\.yml|CONTRIBUTING\.md)$'
         language: fail
   - repo: https://github.com/xxp-odoo-erp/maintainer-tools
-    rev: 56d375d3c86ce45ba198d4a397004c02302ef760
+    rev: 2c1a37cf1a387f9c3adc50cd7bba9424da9470e5
     hooks:
       # update the NOT INSTALLABLE ADDONS section above
       - id: oca-update-pre-commit-excluded-addons
@@ -55,7 +55,7 @@ repos:
           - --addons-dir=.
           - --branch=16.0
           - --org-name=xxp-odoo-erp
-          - --repo-name=odoo-addons
+          - --repo-name=xxp-odoo-addons
           - --if-source-changed
           - --keep-source-digest
   - repo: https://github.com/OCA/odoo-pre-commit-hooks
