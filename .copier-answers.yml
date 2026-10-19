@@ -5,7 +5,7 @@ additional_ruff_rules: []
 convert_readme_fragments_to_markdown: false
 enable_checklog_odoo: true
 generate_requirements_txt: true
-github_check_license: true
+github_check_license: false
 github_ci_extra_env: {}
 github_enable_codecov: true
 github_enable_makepot: true
