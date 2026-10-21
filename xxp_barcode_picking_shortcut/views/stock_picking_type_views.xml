@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright (C) 2026 XXP
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<odoo>
+    <record id="stock_barcode_view_picking_type_form" model="ir.ui.view">
+        <field name="name">stock.picking.type.form.barcode.shortcut</field>
+        <field name="model">stock.picking.type</field>
+        <field
+            name="inherit_id"
+            ref="stock_barcode.stock_barcode_view_picking_type_form"
+        />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//page[@name='barcode_app']/group[@name='restrict_scan_settings']"
+                position="before"
+            >
+                <group name="barcode_shortcut">
+                    <field name="barcode_shortcut" />
+                    <field
+                        name="barcode_shortcut_sequence"
+                        attrs="{'invisible': [('barcode_shortcut', '=', False)]}"
+                    />
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

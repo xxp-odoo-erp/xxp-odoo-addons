@@ -1,0 +1,137 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* xxp_barcode_picking_shortcut
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: xxp_barcode_picking_shortcut
+#: model:ir.model.fields,field_description:xxp_barcode_picking_shortcut.field_stock_picking_type__barcode_shortcut
+msgid "Barcode App Shortcut"
+msgstr ""
+
+#. module: xxp_barcode_picking_shortcut
+#: model:ir.model.fields,field_description:xxp_barcode_picking_shortcut.field_stock_picking_type__barcode_shortcut_sequence
+msgid "Barcode App Shortcut Sequence"
+msgstr ""
+
+#. module: xxp_barcode_picking_shortcut
+#: model:ir.model.fields,help:xxp_barcode_picking_shortcut.field_stock_picking_type__barcode_shortcut_sequence
+msgid ""
+"Order of the shortcut button on the Barcode app main screen. Lower values "
+"are shown first."
+msgstr ""
+
+#. module: xxp_barcode_picking_shortcut
+#: model:ir.model,name:xxp_barcode_picking_shortcut.model_stock_picking_type
+msgid "Picking Type"
+msgstr ""
+
+#. module: xxp_barcode_picking_shortcut
+#. odoo-javascript
+#: code:addons/xxp_barcode_picking_shortcut/static/src/main_menu/stock_barcode_main_menu.xml:0
+#: code:addons/xxp_barcode_picking_shortcut/static/src/main_menu/stock_barcode_main_menu.xml:0
+#: code:addons/xxp_barcode_picking_shortcut/static/src/main_menu/stock_barcode_main_menu.xml:0
+#: code:addons/xxp_barcode_picking_shortcut/static/src/main_menu/stock_barcode_main_menu.xml:0
+#, python-format
+msgid "Scan a"
+msgstr ""
+
+#. module: xxp_barcode_picking_shortcut
+#. odoo-javascript
+#: code:addons/xxp_barcode_picking_shortcut/static/src/main_menu/stock_barcode_main_menu.xml:0
+#, python-format
+msgid "Scan an"
+msgstr ""
+
+#. module: xxp_barcode_picking_shortcut
+#. odoo-javascript
+#: code:addons/xxp_barcode_picking_shortcut/static/src/main_menu/stock_barcode_main_menu.xml:0
+#, python-format
+msgid "Scanning help"
+msgstr ""
+
+#. module: xxp_barcode_picking_shortcut
+#: model:ir.model.fields,help:xxp_barcode_picking_shortcut.field_stock_picking_type__barcode_shortcut
+msgid ""
+"Show a shortcut button for this operation type on the Barcode app main "
+"screen."
+msgstr ""
+
+#. module: xxp_barcode_picking_shortcut
+#. odoo-javascript
+#: code:addons/xxp_barcode_picking_shortcut/static/src/main_menu/stock_barcode_main_menu.xml:0
+#, python-format
+msgid "document"
+msgstr ""
+
+#. module: xxp_barcode_picking_shortcut
+#. odoo-javascript
+#: code:addons/xxp_barcode_picking_shortcut/static/src/main_menu/stock_barcode_main_menu.xml:0
+#, python-format
+msgid "location"
+msgstr ""
+
+#. module: xxp_barcode_picking_shortcut
+#. odoo-javascript
+#: code:addons/xxp_barcode_picking_shortcut/static/src/main_menu/stock_barcode_main_menu.xml:0
+#, python-format
+msgid "operation type"
+msgstr ""
+
+#. module: xxp_barcode_picking_shortcut
+#. odoo-javascript
+#: code:addons/xxp_barcode_picking_shortcut/static/src/main_menu/stock_barcode_main_menu.xml:0
+#, python-format
+msgid "package"
+msgstr ""
+
+#. module: xxp_barcode_picking_shortcut
+#. odoo-javascript
+#: code:addons/xxp_barcode_picking_shortcut/static/src/main_menu/stock_barcode_main_menu.xml:0
+#, python-format
+msgid "product"
+msgstr ""
+
+#. module: xxp_barcode_picking_shortcut
+#. odoo-javascript
+#: code:addons/xxp_barcode_picking_shortcut/static/src/main_menu/stock_barcode_main_menu.xml:0
+#, python-format
+msgid "to create a new transfer from this location."
+msgstr ""
+
+#. module: xxp_barcode_picking_shortcut
+#. odoo-javascript
+#: code:addons/xxp_barcode_picking_shortcut/static/src/main_menu/stock_barcode_main_menu.xml:0
+#, python-format
+msgid "to create a new transfer."
+msgstr ""
+
+#. module: xxp_barcode_picking_shortcut
+#. odoo-javascript
+#: code:addons/xxp_barcode_picking_shortcut/static/src/main_menu/stock_barcode_main_menu.xml:0
+#, python-format
+msgid "to know its content."
+msgstr ""
+
+#. module: xxp_barcode_picking_shortcut
+#. odoo-javascript
+#: code:addons/xxp_barcode_picking_shortcut/static/src/main_menu/stock_barcode_main_menu.xml:0
+#, python-format
+msgid "to open it."
+msgstr ""
+
+#. module: xxp_barcode_picking_shortcut
+#. odoo-javascript
+#: code:addons/xxp_barcode_picking_shortcut/static/src/main_menu/stock_barcode_main_menu.xml:0
+#, python-format
+msgid "to show its location and quantity."
+msgstr ""

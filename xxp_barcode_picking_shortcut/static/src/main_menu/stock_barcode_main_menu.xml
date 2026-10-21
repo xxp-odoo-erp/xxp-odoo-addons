@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright (C) 2026 XXP
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<templates xml:space="preserve">
+    <!-- Helper text moved from the main screen into a tooltip.
+         The tooltip service spreads data-tooltip-info keys into this context. -->
+    <ul
+        t-name="xxp_barcode_picking_shortcut.MainMenuHelp"
+        class="text-start mb-0 ps-3"
+        owl="1"
+    >
+        <li>Scan an <b>operation type</b> to create a new transfer.</li>
+        <li t-if="locationsEnabled">
+            Scan a <b>location</b> to create a new transfer from this location.
+        </li>
+        <li>Scan a <b>document</b> to open it.</li>
+        <li>Scan a <b>product</b> to show its location and quantity.</li>
+        <li t-if="packagesEnabled">Scan a <b>package</b> to know its content.</li>
+    </ul>
+
+    <t t-inherit="stock_barcode.MainMenu" t-inherit-mode="extension" owl="1">
+        <xpath expr="//h1" position="inside">
+            <i
+                class="o_barcode_help_tooltip fa fa-info-circle fs-2 ms-2 align-middle text-muted"
+                role="button"
+                aria-label="Scanning help"
+                data-tooltip-template="xxp_barcode_picking_shortcut.MainMenuHelp"
+                t-att-data-tooltip-info="helpTooltipInfo"
+                data-tooltip-delay="0"
+                data-tooltip-touch-tap-to-show="true"
+            />
+        </xpath>
+        <!-- "replace" is required: the helper text is moved into the tooltip
+             template above and there is no way to move a node across templates. -->
+        <xpath expr="//ul[hasclass('text-start')]" position="replace" />
+        <!-- Appended as the last child so the shortcuts stay at the very bottom,
+             below the buttons added by other modules. -->
+        <xpath expr="//div[hasclass('o_stock_barcode_main_menu')]" position="inside">
+            <div t-if="state.shortcuts.length" class="o_barcode_shortcut_buttons">
+                <div
+                    t-foreach="shortcutRows"
+                    t-as="row"
+                    t-key="row_index"
+                    class="row mt-sm-4"
+                >
+                    <div
+                        t-foreach="row"
+                        t-as="shortcut"
+                        t-key="shortcut.id"
+                        class="col"
+                    >
+                        <button
+                            class="o_barcode_shortcut_button btn btn-block btn-primary mb-4 w-100"
+                            t-on-click="() => this.onClickShortcut(shortcut.id)"
+                            t-esc="shortcut.name"
+                        />
+                    </div>
+                    <div t-if="row.length === 1" class="col d-none d-sm-block" />
+                </div>
+            </div>
+        </xpath>
+    </t>
+</templates>
