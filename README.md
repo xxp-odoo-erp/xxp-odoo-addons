@@ -23,6 +23,7 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [cdek_delivery](cdek_delivery/) | 16.0.2.0.0 |  | Send shipping through CDEK and track them online
+[xxp_barcode_picking_shortcut](xxp_barcode_picking_shortcut/) | 16.0.1.0.0 |  | Add picking operation shortcuts to the barcode App
 
 [//]: # (end addons)
 
