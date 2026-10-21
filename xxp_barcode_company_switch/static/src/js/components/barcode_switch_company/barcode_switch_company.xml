@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+
+    <t
+        t-name="xxp_barcode_company_switch.BarcodeSwitchCompany"
+        t-inherit="web.SwitchCompanyMenu"
+        t-inherit-mode="primary"
+        owl="1"
+    >
+        <xpath expr="//t[@t-set-slot='toggler']" position="replace">
+            <t t-set-slot="toggler">
+                <span class="oe_topbar_name" t-esc="currentCompany.name" />
+            </t>
+        </xpath>
+        <t t-call="web.SwitchCompanyItem" position="replace">
+            <t t-call="xxp_barcode_company_switch.BarcodeSwitchCompanyItem">
+                <t t-set="company" t-value="company" />
+            </t>
+        </t>
+        <xpath expr="//Dropdown" position="attributes">
+            <attribute
+                name="togglerClass"
+            >'btn btn-block btn-warning w-100 mb-3'</attribute>
+            <attribute name="class">'o_switch_company_menu'</attribute>
+            <attribute name="position">''</attribute>
+        </xpath>
+    </t>
+
+    <t
+        t-name="xxp_barcode_company_switch.BarcodeSwitchCompanyItem"
+        t-inherit="web.SwitchCompanyItem"
+        t-inherit-mode="primary"
+        owl="1"
+    >
+        <xpath expr="//div[@role='menuitemcheckbox']" position="replace" />
+        <xpath expr="//span[hasclass('company_label')]" position="attributes">
+            <attribute name="class">company_label pe-3 m-4</attribute>
+        </xpath>
+    </t>
+
+</templates>

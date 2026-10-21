@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <div t-inherit="stock_barcode.MainComponent" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[hasclass('o_barcode_header')]" position="before">
+            <span class="w-100 text-white text-center" t-if="isDisplayCompanyName">
+                <h4 class="o_title m-2" t-esc="displayCompanyName" />
+            </span>
+        </xpath>
+    </div>
+
+</templates>
