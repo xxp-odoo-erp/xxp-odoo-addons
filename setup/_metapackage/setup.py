@@ -9,6 +9,7 @@ setuptools.setup(
     version=version,
     install_requires=[
         'odoo-addon-cdek_delivery>=16.0dev,<16.1dev',
+        'odoo-addon-xxp_barcode_picking_shortcut>=16.0dev,<16.1dev',
     ],
     classifiers=[
         'Programming Language :: Python',
