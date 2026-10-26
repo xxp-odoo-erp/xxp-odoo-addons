@@ -1,0 +1,2 @@
+- [XXP](https://xxp-odoo.com):
+  - geomer198 \<geomer198@gmail.com\>

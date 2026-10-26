@@ -1,2 +1,6 @@
 # generated from manifests external_dependencies
 cdek
+opentelemetry-api
+opentelemetry-exporter-otlp-proto-http
+opentelemetry-instrumentation-logging
+opentelemetry-sdk
