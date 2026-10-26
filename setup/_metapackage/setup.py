@@ -11,6 +11,7 @@ setuptools.setup(
         'odoo-addon-cdek_delivery>=16.0dev,<16.1dev',
         'odoo-addon-xxp_barcode_company_switch>=16.0dev,<16.1dev',
         'odoo-addon-xxp_barcode_picking_shortcut>=16.0dev,<16.1dev',
+        'odoo-addon-xxp_otel>=16.0dev,<16.1dev',
     ],
     classifiers=[
         'Programming Language :: Python',

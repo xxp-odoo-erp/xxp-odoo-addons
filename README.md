@@ -25,6 +25,7 @@ addon | version | maintainers | summary
 [cdek_delivery](cdek_delivery/) | 16.0.2.0.0 |  | Send shipping through CDEK and track them online
 [xxp_barcode_company_switch](xxp_barcode_company_switch/) | 16.0.1.0.0 |  | Switch company in the Barcode App
 [xxp_barcode_picking_shortcut](xxp_barcode_picking_shortcut/) | 16.0.1.0.0 |  | Add picking operation shortcuts to the barcode App
+[xxp_otel](xxp_otel/) | 16.0.1.0.0 |  | OpenTelemetry tracing and structured log export for Odoo
 
 [//]: # (end addons)
 
